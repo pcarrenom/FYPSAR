@@ -27,8 +27,8 @@ from multiprocessing import Process
 from enum import Enum, unique
 
 
-basic_url = "http://127.0.0.1:9090/v1/"
-ip = "127.0.0.1"
+basic_url = "http://160.69.69.147:9090/v1/"
+ip = "160.69.69.147"
 headers = {'Content-Type': 'application/json'}
 nest_asyncio.apply()
 
