@@ -9,10 +9,18 @@ def robot_pause():
 
 ip_addr = '160.69.69.103'
 YanAPI.yan_api_init(ip_addr)
-print(YanAPI.get_motion_list())
-YanAPI.start_play_motion(name = '青春修炼手册', speed = "slow")
-robot_pause()
-YanAPI.start_play_motion(name = 'reset')
+print(YanAPI.get_sensors_gyro())
+
+#YanAPI.start_play_motion(name = 'TurnLeft', speed = "slow") #Unknown which movements are available
+#robot_pause()
+#YanAPI.start_play_motion(name = 'reset')
+#print(YanAPI.get_motion_list())
+#print(YanAPI.get_robot_battery_info())
+
+#print(YanAPI.get_voice_iat())
+#YanAPI.start_play_motion(name = 'squat', speed = "slow")
+#robot_pause()
+#YanAPI.start_play_motion(name = 'reset')
 
 #def robot_pause():
 #    while YanAPI.get_current_motion_play_state()['data']['status'] != "idle":
