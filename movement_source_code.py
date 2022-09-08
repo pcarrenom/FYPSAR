@@ -9,7 +9,7 @@ def robot_pause():
 
 ip_addr = '160.69.69.103'
 YanAPI.yan_api_init(ip_addr)
-print(YanAPI.get_sensors_gyro())
+YanAPI.upload_media_music("voice/Hello.wav")
 
 #YanAPI.start_play_motion(name = 'TurnLeft', speed = "slow") #Unknown which movements are available
 #robot_pause()
