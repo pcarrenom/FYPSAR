@@ -9,7 +9,9 @@ def robot_pause():
 
 ip_addr = '160.69.69.103'
 YanAPI.yan_api_init(ip_addr)
-YanAPI.upload_media_music("C://Documents/Uni/FYP/Code/FYPSAR/voice/Hello.wav")
+YanAPI.start_play_motion(name = 'TurnRight')
+robot_pause()
+YanAPI.start_play_motion(name = 'reset')
 
 #YanAPI.start_play_motion(name = 'TurnLeft', speed = "slow") #Unknown which movements are available
 #robot_pause()
