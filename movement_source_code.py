@@ -9,7 +9,8 @@ def robot_pause():
 
 ip_addr = '160.69.69.103'
 YanAPI.yan_api_init(ip_addr)
-YanAPI.start_play_motion(name = 'TurnRight')
+YanAPI.get_motion_list()
+YanAPI.start_play_motion(name = 'Forward')
 robot_pause()
 YanAPI.start_play_motion(name = 'reset')
 

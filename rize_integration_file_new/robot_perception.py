@@ -4,7 +4,7 @@ import YanAPI
 
 node = nep.node('python_sender')
 pub = node.new_pub('/blackboard','json')
-robot_ip = '169.69.69.103'
+robot_ip = '160.69.69.103'
 
 # Dummy perceptual function
 def isHeadTouched():
@@ -17,8 +17,8 @@ while True:
     # Here your code that recognize something
     # Example: 
 #    sendIP(robot_ip)
-    head_touched = isHeadTouched()
-    if head_touched:
+    input_f = input("Type F to actuate: ")
+    if input_f == 'F':
         msg = {'primitive':'touched', 'input':{"head":1}, "robot":"ROS"}	
         pub.publish(msg)
         print("perception send")

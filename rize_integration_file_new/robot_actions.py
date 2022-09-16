@@ -1,18 +1,14 @@
 import nep
 from rize import *
 from my_robot import Robot
-import YanAPI
 
 class RIZEAction(object):
 
-
     def __init__(self):
-        print("Initialising")
-        ip_addr = '160.69.69.103'
-        #YanAPI.yan_api_init(ip_addr)
-        self.rize_robot = ActionEngine("ROS", "listen") #Receives
-        self.my_robot = Robot("TestRobot") #Publishes
-        print(self.my_robot)
+
+        self.rize_robot = ActionEngine("ROS", "listen")
+        self.my_robot = Robot("TestRobot")
+
         self.robot_actions = {
             "say": self.my_robot.say,
             "walk": self.my_robot.move,
@@ -22,10 +18,8 @@ class RIZEAction(object):
         try:
             print("Robot ready")
             self.rize_robot.onConnectSuccess()
-            print("Connection success")
 
             # Set actions
-            print("actions activated")
             self.rize_robot.setRobotActions(self.robot_actions)
 
             # Spin node
@@ -36,5 +30,4 @@ class RIZEAction(object):
 
 if __name__ == '__main__':
     node = RIZEAction()
-    print("node run")
     node.run()
