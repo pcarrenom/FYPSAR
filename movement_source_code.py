@@ -9,10 +9,11 @@ def robot_pause():
 
 ip_addr = '160.69.69.103'
 YanAPI.yan_api_init(ip_addr)
-YanAPI.get_motion_list()
-YanAPI.start_play_motion(name = 'Forward')
-robot_pause()
-YanAPI.start_play_motion(name = 'reset')
+print(YanAPI.get_sensors_gyro())
+
+#YanAPI.start_play_motion(name = 'ActionAging')
+#robot_pause()
+#YanAPI.start_play_motion(name = 'reset')
 
 #YanAPI.start_play_motion(name = 'TurnLeft', speed = "slow") #Unknown which movements are available
 #robot_pause()
