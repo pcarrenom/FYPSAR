@@ -15,7 +15,7 @@ class Robot():
         print("Robot Connected")
 
     def say(self, value, parameters):
-        YanAPI.start_play_motion(name = '青春修炼手册')
+        YanAPI.start_play_motion(name = 'takebreak')
         robot_pause()
         YanAPI.start_play_motion(name = 'reset')
         print("Hello, I'm saying something")
@@ -28,12 +28,16 @@ class Robot():
     def move(self, value, parameters):
         print("Hello, I'm moving")
         print("Value", value, "Parameters", parameters)
+        print(parameters['meters'])
+        metre = parameters['meters']
+        repetition = int(metre//0.08)
+        print(repetition)
         if value == 'forwards':
-            YanAPI.start_play_motion(name = 'Forward')
+            YanAPI.start_play_motion(name = 'walk', direction = 'forward', repeat = repetition)
             robot_pause()
             YanAPI.start_play_motion(name = 'reset')
         elif value == 'backwards':
-            YanAPI.start_play_motion(name = 'Backward')
+            YanAPI.start_play_motion(name = 'walk', direction = 'backward', repeat = repetition)
             robot_pause()
             YanAPI.start_play_motion(name = 'reset')
         

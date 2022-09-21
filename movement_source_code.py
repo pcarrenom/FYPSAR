@@ -5,16 +5,22 @@ import YanAPI
 # *  @return 无返回值
 def robot_pause():
     while YanAPI.get_current_motion_play_state()['data']['status'] != "idle":
+        print("robot running")
         pass
 
 ip_addr = '160.69.69.103'
 YanAPI.yan_api_init(ip_addr)
-print(YanAPI.get_sensors_gyro())
-
-#YanAPI.start_play_motion(name = 'ActionAging')
-#robot_pause()
-#YanAPI.start_play_motion(name = 'reset')
-
+#print(YanAPI.get_motion_list())
+YanAPI.start_play_motion(name = 'walk', direction="backward",repeat=3)
+robot_pause()      
+YanAPI.start_play_motion(name = 'reset')
+"""
+distance = float(input("Type distance in metres: "))
+repetition = int(distance // 0.06)
+YanAPI.start_play_motion(name = 'walk', direction="forward",repeat=repetition,speed="slow") #One iteration 6cm
+robot_pause()
+YanAPI.start_play_motion(name = 'reset')
+"""
 #YanAPI.start_play_motion(name = 'TurnLeft', speed = "slow") #Unknown which movements are available
 #robot_pause()
 #YanAPI.start_play_motion(name = 'reset')
