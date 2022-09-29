@@ -11,8 +11,9 @@ def robot_pause():
 ip_addr = '160.69.69.103'
 YanAPI.yan_api_init(ip_addr)
 #print(YanAPI.get_motion_list())
-YanAPI.start_play_motion(name = 'walk', direction="backward",repeat=3)
-robot_pause()      
+YanAPI.set_robot_volume_value(70)
+YanAPI.start_play_motion(name = 'walk', direction='right', repeat = 3)
+robot_pause()         
 YanAPI.start_play_motion(name = 'reset')
 """
 distance = float(input("Type distance in metres: "))
