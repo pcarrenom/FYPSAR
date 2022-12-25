@@ -12,19 +12,29 @@ def robot_pause():
 ip_addr = '160.69.69.103'
 YanAPI.yan_api_init(ip_addr)
 print(YanAPI.get_motion_list())
+#print(robot_actions)
 
-YanAPI.set_robot_language('en')
-YanAPI.start_voice_tts('Welcome to RoMI Lab. I am Yanshee. It is really nice to meet you', interrupt=False)
-YanAPI.set_robot_language('zh')
-YanAPI.start_voice_tts('欢迎您来到RoMI实验室。我叫Yanshee。很高兴认识您！', interrupt=False)
-"""
-YanAPI.set_robot_volume_value(70)
-for i in range(10):
-    YanAPI.start_play_motion(name = 'walk', direction = 'left', speed = 'very fast')
-    robot_pause() 
-      
+YanAPI.set_robot_volume_value(100)
+#YanAPI.set_robot_language('en')
+#YanAPI.start_voice_tts('Hello, I am Yanshee, I am ready to play some music', interrupt=False)
+#YanAPI.start_play_motion(name = 'ActionAging1', speed = 'slow')
+#interrupt = input("Type X to stop: ")
+print(YanAPI.get_motion_list_value())
+YanAPI.start_play_motion(name = 'HeadTurn')
+robot_pause()
 YanAPI.start_play_motion(name = 'reset')
+
 """
+for moves in robot_actions:
+    if moves['music'] == True:
+        print(moves)
+        skippy = input("Type S to skip")
+        if skippy != 'S':
+            YanAPI.start_play_motion(name = moves['name'], speed = 'slow')
+            robot_pause() 
+            YanAPI.start_play_motion(name = 'reset')
+"""
+
 """
 distance = float(input("Type distance in metres: "))
 repetition = int(distance // 0.06)
@@ -32,20 +42,3 @@ YanAPI.start_play_motion(name = 'walk', direction="forward",repeat=repetition,sp
 robot_pause()
 YanAPI.start_play_motion(name = 'reset')
 """
-#YanAPI.start_play_motion(name = 'TurnLeft', speed = "slow") #Unknown which movements are available
-#robot_pause()
-#YanAPI.start_play_motion(name = 'reset')
-#print(YanAPI.get_motion_list())
-#print(YanAPI.get_robot_battery_info())
-
-#print(YanAPI.get_voice_iat())
-#YanAPI.start_play_motion(name = 'squat', speed = "slow")
-#robot_pause()
-#YanAPI.start_play_motion(name = 'reset')
-#Y
-#
-#print(YanAPI.get_media_music_list())
-#YanAPI.start_play_motion(name = 'walk', speed = "slow") #Unknown which movements are available
-#robot_pause()
-#YanAPI.start_play_motion(name = 'reset')
-#Run 'hostname -I' on Yanshee terminal to retrieve IP Address

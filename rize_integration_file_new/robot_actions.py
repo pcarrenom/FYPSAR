@@ -12,6 +12,15 @@ class RIZEAction(object):
         self.robot_actions = {
             "say": self.my_robot.say,
             "walk": self.my_robot.move,
+            "headroll": self.my_robot.headroll,
+            "wriststretch": self.my_robot.wriststretch,
+            "shoulderstretch": self.my_robot.shoulderstretch,
+            "upperlower": self.my_robot.upperlower,
+            "footrotation": self.my_robot.footrotation,
+            "forwardstretch": self.my_robot.forwardstretch,
+            "sidebend": self.my_robot.sidebend,
+            "backarch": self.my_robot.backarch,
+            "pectoralstretch": self.my_robot.pectoralstretch,
         }
 
     def run(self):
