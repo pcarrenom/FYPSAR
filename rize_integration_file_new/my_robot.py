@@ -46,38 +46,40 @@ class Robot():
         time.sleep(2)
         return "success"
 
-    def headroll(self):
-        print("Time to roll my head")
-        YanAPI.start_play_motion(name = 'HeadTurn')
+    def animation(self, value, parameters): 
+        print(value)
+        if value == "headroll":
+            print("Time to roll my head")
+            YanAPI.start_play_motion(name = 'HeadTurn')
+        
+        elif value == "wriststretch":
+            print("time to stretch my wrist")
+            YanAPI.start_play_motion(name = 'WristStretch')
 
-    def wriststretch(self):
-        print("time to stretch my wrist")
-        YanAPI.start_play_motion(name = 'WristStretch')
-    
-    def shoulderstretch(self):
-        print("time to stretch my shoulder")
-        YanAPI.start_play_motion(name = '肩膀连动')
+        elif value == "shoulderstretch":
+            print("time to stretch my shoulder")
+            YanAPI.start_play_motion(name = '肩膀连动')
 
-    def upperlower(self):
-        print("time for some upper and lower stretches")
-        YanAPI.start_play_motion(name = 'UpperLower')
+        elif value == "upperlower":
+            print("time for some upper and lower stretches")
+            YanAPI.start_play_motion(name = 'UpperLower')
 
-    def footrotation(self):
-        print("Let me rotate my foot")
-        YanAPI.start_play_motion(name = 'FootRotation')
+        elif value == "footrotation":
+            print("Let me rotate my foot")
+            YanAPI.start_play_motion(name = 'FootRotation')
 
-    def forwardstretch(self):
-        print("forward stretch")
-        YanAPI.start_play_motion(name = 'ForwardStretch')
+        elif value == "forwardstretch":
+            print("forward stretch")
+            YanAPI.start_play_motion(name = 'ForwardStretch')
 
-    def backarch(self):
-        print("Back Arch")
-        YanAPI.start_play_motion(name = 'BackwardsArch')
+        elif value == "backarch":
+            print("Back Arch")
+            YanAPI.start_play_motion(name = 'BackwardsArch')
 
-    def pectoralstretch(self):
-        print("pectoral")
-        YanAPI.start_play_motion(name = 'Pectoral')
+        elif value == "pectoral":
+            print("pectoral")
+            YanAPI.start_play_motion(name = 'Pectoral')
 
-    def sidebend(self):
-        print("side bends")
-        YanAPI.start_play_motion(name = 'Outreach')
+        elif value == "sidebend":
+            print("side bends")
+            YanAPI.start_play_motion(name = 'Outreach')

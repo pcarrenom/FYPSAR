@@ -13,7 +13,7 @@ class RIZEAction(object):
         self.robot_actions = {
             "say": self.my_robot.say,
             "walk": self.my_robot.move,
-            "headroll": self.my_robot.headroll,
+            "animation": self.my_robot.animation,
             
         }
 
