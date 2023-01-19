@@ -1,4 +1,6 @@
 import time
+import sys
+sys.path.append("/Documents/Uni/FYP/Code/FYPSAR/third-party") #Please change directory accordingly
 import YanAPI
 
 robot_ip = "160.69.69.103"
@@ -51,35 +53,44 @@ class Robot():
         if value == "headroll":
             print("Time to roll my head")
             YanAPI.start_play_motion(name = 'HeadTurn')
+            YanAPI.start_play_motion(name = 'reset')
         
         elif value == "wriststretch":
             print("time to stretch my wrist")
             YanAPI.start_play_motion(name = 'WristStretch')
+            YanAPI.start_play_motion(name = 'reset')
 
         elif value == "shoulderstretch":
             print("time to stretch my shoulder")
             YanAPI.start_play_motion(name = '肩膀连动')
+            YanAPI.start_play_motion(name = 'reset')
 
         elif value == "upperlower":
             print("time for some upper and lower stretches")
             YanAPI.start_play_motion(name = 'UpperLower')
+            YanAPI.start_play_motion(name = 'reset')
 
         elif value == "footrotation":
             print("Let me rotate my foot")
             YanAPI.start_play_motion(name = 'FootRotation')
+            YanAPI.start_play_motion(name = 'reset')
 
         elif value == "forwardstretch":
             print("forward stretch")
             YanAPI.start_play_motion(name = 'ForwardStretch')
+            YanAPI.start_play_motion(name = 'reset')
 
         elif value == "backarch":
             print("Back Arch")
             YanAPI.start_play_motion(name = 'BackwardsArch')
+            YanAPI.start_play_motion(name = 'reset')
 
         elif value == "pectoral":
             print("pectoral")
             YanAPI.start_play_motion(name = 'Pectoral')
+            YanAPI.start_play_motion(name = 'reset')
 
         elif value == "sidebend":
             print("side bends")
             YanAPI.start_play_motion(name = 'Outreach')
+            YanAPI.start_play_motion(name = 'reset')
