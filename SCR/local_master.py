@@ -3,7 +3,7 @@ import zmq
 import time
 import nep
 import sys
-sys.path.append("/Documents/Uni/FYP/Code/FYPSAR/third-party") #Please change directory accordingly
+sys.path.append("/Users/jeffreyjahja/Documents/Uni/FYP/Code/FYPSAR/third-party") #Please change directory accordingly
 import YanAPI
 
 

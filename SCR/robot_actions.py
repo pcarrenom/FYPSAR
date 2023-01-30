@@ -12,7 +12,12 @@ class RIZEAction(object):
         self.robot_actions = {
             "say": self.my_robot.say,
             "walk": self.my_robot.move,
-            "animation": self.my_robot.animation,
+            "animation": self.my_robot.stretch,
+            "turn": self.my_robot.turn,
+            "mode": self.my_robot.mode,
+            "walk_toward": self.my_robot.arm,
+            "track_redball_with": self.my_robot.leg,
+            "wait": self.my_robot.idle,
         }
 
     def run(self):

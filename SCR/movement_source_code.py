@@ -1,3 +1,7 @@
+# Test code
+import sys
+sys.path.append("/Users/jeffreyjahja/Documents/Uni/FYP/Code/FYPSAR/third-party") #Please change directory accordingly
+#print(sys.path)
 import YanAPI
 
 #    初始化SDK
@@ -14,31 +18,12 @@ YanAPI.yan_api_init(ip_addr)
 print(YanAPI.get_motion_list())
 #print(robot_actions)
 
-YanAPI.set_robot_volume_value(100)
+YanAPI.set_robot_volume_value(50)
 #YanAPI.set_robot_language('en')
 #YanAPI.start_voice_tts('Hello, I am Yanshee, I am ready to play some music', interrupt=False)
 #YanAPI.start_play_motion(name = 'ActionAging1', speed = 'slow')
 #interrupt = input("Type X to stop: ")
-print(YanAPI.get_motion_list_value())
-YanAPI.start_play_motion(name = 'HeadTurn')
+#print(YanAPI.get_motion_list_value())
+YanAPI.start_play_motion(name = 'BothFootBack')
 robot_pause()
 YanAPI.start_play_motion(name = 'reset')
-
-"""
-for moves in robot_actions:
-    if moves['music'] == True:
-        print(moves)
-        skippy = input("Type S to skip")
-        if skippy != 'S':
-            YanAPI.start_play_motion(name = moves['name'], speed = 'slow')
-            robot_pause() 
-            YanAPI.start_play_motion(name = 'reset')
-"""
-
-"""
-distance = float(input("Type distance in metres: "))
-repetition = int(distance // 0.06)
-YanAPI.start_play_motion(name = 'walk', direction="forward",repeat=repetition,speed="slow") #One iteration 6cm
-robot_pause()
-YanAPI.start_play_motion(name = 'reset')
-"""
