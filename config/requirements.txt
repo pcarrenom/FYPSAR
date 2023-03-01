@@ -1,0 +1,5 @@
+python==3.5.0
+node.js==19.0.0
+opencv-contrib-python==4.2.0.34
+numpy==1.18.5
+asyncio==3.4.3
