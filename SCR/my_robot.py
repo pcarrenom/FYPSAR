@@ -2,15 +2,32 @@ import time
 import sys
 sys.path.append("/Users/jeffreyjahja/Documents/Uni/FYP/Code/FYPSAR/third-party") #Please change directory accordingly
 import YanAPI
+import logging
 
 robot_ip = "160.69.69.103"
+
+stretchdict = {
+    "headturn": "HeadTurn",
+    "wriststretch": "WristStretch",
+    "shoulderstretch": "ShoulderStretch",
+    "upperlowerstretch": "UpperLower",
+    "footrotation": "FootRotation",
+    "forwardstretch": "ForwardStretch",
+    "backarch": "BackwardsArch",
+    "Pectoral": "pectoral",
+    "sidebend": "SideBend",
+    "chintuck": "ChinTuck",
+    "headroll": "HeadRoll",
+    "shoulderroll": "ShoulderRoll",
+    "eyerest": "EyeRest"
+}
 
 def robot_pause():
     while YanAPI.get_current_motion_play_state()['data']['status'] != "idle":
         pass
 
 def speech_pause():
-    while YanAPI.get_current_motion_play_state()['data']['status'] != "idle":
+    while YanAPI.get_voice_tts_state()['status'] != "idle":
         pass
 
 class Robot():
@@ -18,10 +35,12 @@ class Robot():
     def __init__(self, name):
         self.name = name
         YanAPI.yan_api_init(robot_ip)
-        print("Robot Connected")
+        #print("Robot Connected")
 
     def say(self, value, parameters):
-        print("Value", value, "Parameters", parameters)
+        #print("Value", value, "Parameters", parameters)
+        if len(parameters) == 0:
+            YanAPI.set_robot_volume_value(50)
         YanAPI.set_robot_volume_value(parameters['velocity'])
         YanAPI.start_voice_tts(value, interrupt=False)
         # Insert YanAPI
@@ -30,150 +49,81 @@ class Robot():
         return "success"
 
     def move(self, value, parameters):
-        print("Hello, I'm moving")
-        print("Value", value, "Parameters", parameters)
-        print(parameters['meters'])
-        metre = float(parameters['meters'])
-        print(metre)
-        repetition = int(metre//0.08)
-        print(repetition)
-        if value == 'forwards':
-            for i in range(repetition):
-                YanAPI.start_play_motion(name = 'walk', direction = 'forward')
-                robot_pause()
-                print(i)
-            YanAPI.start_play_motion(name = 'reset')
-        elif value == 'backwards':
+        #print("Hello, I'm moving")
+        #print("Value", value, "Parameters", parameters)
+        #print(parameters['meters'])
+        if len(parameters) == 0:
+            repetition = 1
+        else:
+            metre = float(parameters['meters'])
+            repetition = int(metre//0.08)
+        #print(repetition)
+        if value == 'backwards':
             for i in range(repetition):
                 YanAPI.start_play_motion(name = 'walk', direction = 'backward')
                 robot_pause()
+            YanAPI.start_play_motion(name = 'reset')
+
+        else:
+            for i in range(repetition):
+                YanAPI.start_play_motion(name = 'walk', direction = 'forward')
+                robot_pause()
+                #print(i)
             YanAPI.start_play_motion(name = 'reset')
         
         time.sleep(2)
         return "success"
 
     def stretch(self, value, parameters): 
-        print(value)
-        if value == "headroll":
-            print("Time to roll my head")
-            YanAPI.start_play_motion(name = 'HeadTurn')
-            robot_pause()
-            YanAPI.start_play_motion(name = 'reset')
-        
-        elif value == "wriststretch":
-            print("time to stretch my wrist")
-            YanAPI.start_play_motion(name = 'WristStretch')
-            robot_pause()
-            YanAPI.start_play_motion(name = 'reset')
+        #print(value)
+        if value not in stretchdict:
+            YanAPI.start_voice_tts("Stretch not recognised. No motion will be played.", interrupt=True)
 
-        elif value == "shoulderstretch":
-            print("time to stretch my shoulder")
-            YanAPI.start_play_motion(name = '肩膀连动')
+        else:
+            YanAPI.start_play_motion(name = stretchdict[value])
             robot_pause()
             YanAPI.start_play_motion(name = 'reset')
-
-        elif value == "upperlower":
-            print("time for some upper and lower stretches")
-            YanAPI.start_play_motion(name = 'UpperLower')
-            robot_pause()
-            YanAPI.start_play_motion(name = 'reset')
-
-        elif value == "footrotation":
-            print("Let me rotate my foot")
-            YanAPI.start_play_motion(name = 'FootRotation')
-            robot_pause()
-            YanAPI.start_play_motion(name = 'reset')
-
-        elif value == "forwardstretch":
-            print("forward stretch")
-            YanAPI.start_play_motion(name = 'ForwardStretch')
-            robot_pause()
-            YanAPI.start_play_motion(name = 'reset')
-
-        elif value == "backarch":
-            print("Back Arch")
-            YanAPI.start_play_motion(name = 'BackwardsArch')
-            robot_pause()
-            YanAPI.start_play_motion(name = 'reset')
-
-        elif value == "pectoral":
-            print("pectoral")
-            YanAPI.start_play_motion(name = 'Pectoral')
-            robot_pause()
-            YanAPI.start_play_motion(name = 'reset')
-
-        elif value == "sidebend":
-            print("side bends")
-            YanAPI.start_play_motion(name = 'Outreach')
-            robot_pause()
-            YanAPI.start_play_motion(name = 'reset')
-
-        elif value == "chintuck":
-            print("chin tuck")
-            YanAPI.start_play_motion(name = 'ChinTuck')
-            robot_pause()
-            YanAPI.start_play_motion(name = 'reset')
-
-        elif value == "headroll":
-            print("head roll")
-            YanAPI.start_play_motion(name = 'HeadRoll')
-            robot_pause()
-            YanAPI.start_play_motion(name = 'reset')
-
-        elif value == "shoulderroll":
-            print("shoulder roll")
-            YanAPI.start_play_motion(name = 'ShoulderRoll')
-            robot_pause()
-            YanAPI.start_play_motion(name = 'reset')
-
-        elif value == "eyerest":
-            print("eye rest")
-            YanAPI.start_play_motion(name = 'EyeRest')
-            robot_pause()
-            YanAPI.start_play_motion(name = 'reset')
+        return "success"
 
     def turn(self, value, parameters):
+        if parameters['body'] == "head" and int(parameters['degrees']) > 75:
+            parameters['degrees'] = 75
         if value == "left" and parameters['body'] == "head":
-            YanAPI.start_play_motion(name = 'LookLeft')
+            YanAPI.set_servos_angles({"NeckLR": (90-int(parameters['degrees']))})
             robot_pause()
-            YanAPI.start_play_motion(name = 'reset')
+            #YanAPI.start_play_motion(name = 'reset')
 
         elif value == "right" and parameters['body'] == "head":
-            YanAPI.start_play_motion(name = 'LookRight')
+            YanAPI.set_servos_angles({"NeckLR": (90+int(parameters['degrees']))})
             robot_pause()
-            YanAPI.start_play_motion(name = 'reset')
+            #YanAPI.start_play_motion(name = 'reset')
 
         elif value == "left" and parameters['body'] == "body":
             YanAPI.start_play_motion(name = 'TurnLeft')
             robot_pause()
             YanAPI.start_play_motion(name = 'reset')
 
-        elif value == "right" and parameters['body'] == "body":
+        else:
             YanAPI.start_play_motion(name = 'TurnRight')
             robot_pause()
             YanAPI.start_play_motion(name = 'reset')
+        return "success"
     
     def mode(self, value, parameters):
-        if value == "wake_up":
+        if value == "rest":
+            YanAPI.start_play_motion(name = 'SleepMode')
+            robot_pause()
+        else:
             YanAPI.start_play_motion(name = 'Awake')
             robot_pause()
             YanAPI.start_play_motion(name = 'reset')
             robot_pause()
-        elif value == "rest":
-            YanAPI.start_play_motion(name = 'SleepMode')
-            robot_pause()
+        return "success"
 
     def arm(self, value, parameters):
-        if value == "forward":
-            if parameters['LeftArm'] == 1 and parameters['RightArm'] == 0:
-                YanAPI.start_play_motion(name = 'LeftArmForward')
-                robot_pause()
-            elif parameters['LeftArm'] == 0 and parameters['RightArm'] == 1:
-                YanAPI.start_play_motion(name = 'RightArmForward')
-                robot_pause()
-            elif parameters['LeftArm'] == 1 and parameters['RightArm'] == 1:
-                YanAPI.start_play_motion(name = 'BothArmForward')
-                robot_pause()
+        print(parameters)
+        if len(parameters) == 0:
+            YanAPI.start_voice_tts("No arms chosen.", interrupt=True)
         elif value == "side":
             if parameters['LeftArm'] == 1 and parameters['RightArm'] == 0:
                 YanAPI.start_play_motion(name = 'LeftArmSide')
@@ -184,6 +134,8 @@ class Robot():
             elif parameters['LeftArm'] == 1 and parameters['RightArm'] == 1:
                 YanAPI.start_play_motion(name = 'BothArmSide')
                 robot_pause()
+            else:
+                YanAPI.start_voice_tts("No arms chosen.", interrupt=True)
         elif value == "circle":
             if parameters['LeftArm'] == 1 and parameters['RightArm'] == 0:
                 YanAPI.start_play_motion(name = 'LeftArmCircle')
@@ -194,18 +146,25 @@ class Robot():
             elif parameters['LeftArm'] == 1 and parameters['RightArm'] == 1:
                 YanAPI.start_play_motion(name = 'BothArmCircle')
                 robot_pause()
-
-    def leg(self, value, parameters):
-        if value == "forward":
+            else:
+                YanAPI.start_voice_tts("No arms chosen.", interrupt=True)
+        else:
             if parameters['LeftArm'] == 1 and parameters['RightArm'] == 0:
-                YanAPI.start_play_motion(name = 'LeftFootForward')
+                YanAPI.start_play_motion(name = 'LeftArmForward')
                 robot_pause()
             elif parameters['LeftArm'] == 0 and parameters['RightArm'] == 1:
-                YanAPI.start_play_motion(name = 'RightFootForward')
+                YanAPI.start_play_motion(name = 'RightArmForward')
                 robot_pause()
             elif parameters['LeftArm'] == 1 and parameters['RightArm'] == 1:
-                YanAPI.start_play_motion(name = 'BothFootForward')
+                YanAPI.start_play_motion(name = 'BothArmForward')
                 robot_pause()
+            else:
+                YanAPI.start_voice_tts("No arms chosen.", interrupt=True)
+        return "success"
+
+    def leg(self, value, parameters):
+        if len(parameters) == 0:
+            YanAPI.start_voice_tts("No legs chosen.", interrupt=True)
         elif value == "side":
             if parameters['LeftArm'] == 1 and parameters['RightArm'] == 0:
                 YanAPI.start_play_motion(name = 'LeftFootSide')
@@ -216,6 +175,8 @@ class Robot():
             elif parameters['LeftArm'] == 1 and parameters['RightArm'] == 1:
                 YanAPI.start_play_motion(name = 'BothFootSide')
                 robot_pause()
+            else:
+                YanAPI.start_voice_tts("No legs chosen.", interrupt=True)
         elif value == "backwards":
             if parameters['LeftArm'] == 1 and parameters['RightArm'] == 0:
                 YanAPI.start_play_motion(name = 'LeftFootBack')
@@ -226,6 +187,22 @@ class Robot():
             elif parameters['LeftArm'] == 1 and parameters['RightArm'] == 1:
                 YanAPI.start_play_motion(name = 'BothFootBack')
                 robot_pause()
+            else:
+                YanAPI.start_voice_tts("No legs chosen.", interrupt=True)
+        else:
+            if parameters['LeftArm'] == 1 and parameters['RightArm'] == 0:
+                YanAPI.start_play_motion(name = 'LeftFootForward')
+                robot_pause()
+            elif parameters['LeftArm'] == 0 and parameters['RightArm'] == 1:
+                YanAPI.start_play_motion(name = 'RightFootForward')
+                robot_pause()
+            elif parameters['LeftArm'] == 1 and parameters['RightArm'] == 1:
+                YanAPI.start_play_motion(name = 'BothFootForward')
+                robot_pause()
+            else:
+                YanAPI.start_voice_tts("No legs chosen.", interrupt=True)
+        return "success"
 
     def idle(self, value, parameters):
         time.sleep(int(value))
+        return "success"
