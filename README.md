@@ -45,11 +45,24 @@ It is recommended to create a virtual environment for development. This will hel
 1. Follow these instructions to install nvm https://github.com/nvm-sh/nvm#install--update-script
 2. Close the terminal used to install nvm and open a new one
 3. Install the latest stable version of Node.js
-```console
-$ nvm install --lts
-```
+    ```console
+    $ nvm install --lts
+    ```
 4. Create a new folder called FYP_Code. Inside that folder, clone the following repo
-```
-$ git clone https://github.com/enriquecoronadozu/Open-RIZE-beta.git
-```
+    ```console
+    $ git clone https://github.com/enriquecoronadozu/Open-RIZE-beta.git
+    ```
 5. Activate the latest version of Node.js in your terminal
+    ```console
+    $ nvm use --lts
+    ```
+6. Go to the Open-RIZE-beta folder and install all required dependencies
+    ```console
+    $ npm install
+    ```
+7. Add the following folder hierarchy to your Documents. All projects will be stored in ~Documents/Rize/projects
+
+8. Run RIZE using
+    ```console
+        $ npm start
+    ```
