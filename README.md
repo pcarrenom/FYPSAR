@@ -1,7 +1,5 @@
 # End-User Interface Final Year Project
 These are the Python scripts that are used to code the Yanshee Robot for the final year project.
-## YanAPI checklist
-All Yanshee Robots connected remotely must have YanAPI.yan_api_init() function set up.
 
 ## Setting up the Yanshee Robot
 1. Find the IP Address
@@ -16,7 +14,10 @@ All Yanshee Robots connected remotely must have YanAPI.yan_api_init() function s
 2. Insert it into your code.
     - Make sure to import the YanAPI and a string variable to store the IP Address. Use the function YanAPI.yan_api_init() to connect to the robot.
 
-## Emergency Button
+### YanAPI checklist
+All Yanshee Robots connected remotely must have YanAPI.yan_api_init() function set up.
+
+### Emergency Button
 In case of an emergency, push the button on the head of the robot.
 ![Emergency](../data/images/Emergency_Stop.HEIC)
 
