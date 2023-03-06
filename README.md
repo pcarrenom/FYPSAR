@@ -64,5 +64,5 @@ It is recommended to create a virtual environment for development. This will hel
 
 8. Run RIZE using
     ```console
-        $ npm start
+    $ npm start
     ```
