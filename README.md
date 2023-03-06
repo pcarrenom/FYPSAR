@@ -30,9 +30,25 @@ In case of an emergency, push the button on the head of the robot.
 It is recommended to create a virtual environment for development. This will help with dependency management. It will help to make the project self-contained and easier to share and recreate. Below are instructions on creating a virtual environment and installing all required dependencies using conda. Another alternative is to use venvs + pip tools.
 
 1. Create a new conda environment for the project
+    ```console
     $ conda create -n <name of your environment>
+    ```
 2. Install the following dependencies using pip
+    ```console
     $ conda activate <name of your environment>
     $ pip install nep transitions rize
+    ```
 3. Additional dependencies to work with the Yanshee robot might be needed
 
+### Node and RIZE Interface
+1. Follow these instructions to install nvm https://github.com/nvm-sh/nvm#install--update-script
+2. Close the terminal used to install nvm and open a new one
+3. Install the latest stable version of Node.js
+```console
+$ nvm install --lts
+```
+4. Create a new folder called FYP_Code. Inside that folder, clone the following repo
+```
+$ git clone https://github.com/enriquecoronadozu/Open-RIZE-beta.git
+```
+5. Activate the latest version of Node.js in your terminal

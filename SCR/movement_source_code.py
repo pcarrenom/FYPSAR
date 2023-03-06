@@ -8,9 +8,7 @@ import YanAPI
 # *  @param robot_ip  参数：机器人IP地址
 # *  @return 无返回值
 def robot_pause():
-    print(YanAPI.get_current_motion_play_state()['data']['status'])
     while YanAPI.get_current_motion_play_state()['data']['status'] != "idle":
-        #print("robot running")
         pass
 
 ip_addr = '160.69.69.103'
@@ -23,5 +21,6 @@ YanAPI.set_robot_volume_value(100)
 #YanAPI.start_voice_tts('Hello, I am Yanshee, I am ready to play some music', interrupt=False)
 #YanAPI.start_play_motion(name = 'ActionAging1', speed = 'slow')
 #interrupt = input("Type X to stop: ")
-#print(YanAPI.get_motion_list_value())
-YanAPI.set_servos_angles({"NeckLR": 30})
+print(YanAPI.get_motion_list_value())
+YanAPI.start_play_motion(name = 'LeftTurn')
+robot_pause()

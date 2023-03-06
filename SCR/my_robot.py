@@ -4,6 +4,10 @@ sys.path.append("/Users/jeffreyjahja/Documents/Uni/FYP/Code/FYPSAR/third-party")
 import YanAPI
 import logging
 
+logging.basicConfig(level=logging.INFO, filename='my_robot.log')
+
+FORMAT = '%(asctime)s %(clientip)-15s %(user)-8s %(message)s'
+
 robot_ip = "160.69.69.103"
 
 stretchdict = {
@@ -39,6 +43,7 @@ class Robot():
 
     def say(self, value, parameters):
         #print("Value", value, "Parameters", parameters)
+        logger = logging.root
         if len(parameters) == 0:
             YanAPI.set_robot_volume_value(50)
         YanAPI.set_robot_volume_value(parameters['velocity'])
@@ -52,6 +57,7 @@ class Robot():
         #print("Hello, I'm moving")
         #print("Value", value, "Parameters", parameters)
         #print(parameters['meters'])
+        logger = logging.root
         if len(parameters) == 0:
             repetition = 1
         else:
@@ -76,6 +82,7 @@ class Robot():
 
     def stretch(self, value, parameters): 
         #print(value)
+        logger = logging.root
         if value not in stretchdict:
             YanAPI.start_voice_tts("Stretch not recognised. No motion will be played.", interrupt=True)
 
@@ -86,14 +93,17 @@ class Robot():
         return "success"
 
     def turn(self, value, parameters):
-        if parameters['body'] == "head" and int(parameters['degrees']) > 75:
-            parameters['degrees'] = 75
+        logger = logging.root
         if value == "left" and parameters['body'] == "head":
+            if int(parameters['degrees']) > 75:
+                parameters['degrees'] = 75
             YanAPI.set_servos_angles({"NeckLR": (90-int(parameters['degrees']))})
             robot_pause()
             #YanAPI.start_play_motion(name = 'reset')
 
         elif value == "right" and parameters['body'] == "head":
+            if int(parameters['degrees']) > 75:
+                parameters['degrees'] = 75
             YanAPI.set_servos_angles({"NeckLR": (90+int(parameters['degrees']))})
             robot_pause()
             #YanAPI.start_play_motion(name = 'reset')
@@ -110,6 +120,7 @@ class Robot():
         return "success"
     
     def mode(self, value, parameters):
+        logger = logging.root
         if value == "rest":
             YanAPI.start_play_motion(name = 'SleepMode')
             robot_pause()
@@ -121,7 +132,8 @@ class Robot():
         return "success"
 
     def arm(self, value, parameters):
-        print(parameters)
+        #print(parameters)
+        logger = logging.root
         if len(parameters) == 0:
             YanAPI.start_voice_tts("No arms chosen.", interrupt=True)
         elif value == "side":
@@ -163,6 +175,7 @@ class Robot():
         return "success"
 
     def leg(self, value, parameters):
+        logger = logging.root
         if len(parameters) == 0:
             YanAPI.start_voice_tts("No legs chosen.", interrupt=True)
         elif value == "side":
@@ -204,5 +217,6 @@ class Robot():
         return "success"
 
     def idle(self, value, parameters):
+        logger = logging.root
         time.sleep(int(value))
         return "success"
