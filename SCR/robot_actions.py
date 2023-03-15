@@ -1,6 +1,12 @@
 import nep
 from rize import *
 from my_robot import Robot
+import logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
 
 class RIZEAction(object):
 
@@ -22,7 +28,7 @@ class RIZEAction(object):
 
     def run(self):
         try:
-            print("Robot ready")
+            logging.info('Robot ready')
             self.rize_robot.onConnectSuccess()
 
             # Set actions
@@ -32,7 +38,7 @@ class RIZEAction(object):
             self.rize_robot.spin()
         except:
             self.rize_robot.onConnectError()
-            print("There has been a connection error")
+            logging.error('There is a connection error')
 
 if __name__ == '__main__':
     node = RIZEAction()
