@@ -3,11 +3,6 @@ from rize import *
 from my_robot import Robot
 import logging
 
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-)
-
 class RIZEAction(object):
 
     def __init__(self):
@@ -41,5 +36,10 @@ class RIZEAction(object):
             logging.error('There is a connection error')
 
 if __name__ == '__main__':
+    logging.basicConfig(
+        filename='../log/robot_actions.log',
+        level=logging.INFO,
+        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    )
     node = RIZEAction()
     node.run()

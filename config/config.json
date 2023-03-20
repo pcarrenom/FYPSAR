@@ -3,8 +3,8 @@
         "robot": "160.69.69.103"
     },
     "directory": {
-        "config":"/Users/jeffreyjahja/Documents/Uni/FYP/Code/FYPSAR/config",
-        "log":"/Users/jeffreyjahja/Documents/Uni/FYP/Code/FYPSAR/log",
-        "yan":"/Users/jeffreyjahja/Documents/Uni/FYP/Code/FYPSAR/third-party"
+        "config":"../config",
+        "log":"../log",
+        "yan":"../third-party"
     }
 }

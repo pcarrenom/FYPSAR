@@ -4,17 +4,23 @@ from rize import *
 from my_robot_test import Robot
 import logging
 
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-)
-
 class RIZEAction(object):
 
     def __init__(self):
 
         self.rize_robot = ActionEngine("ROS", "listen")
         self.my_robot = Robot("TestRobot")
+
+        self.robot_actions = {
+            "say": self.my_robot.say,
+            "walk": self.my_robot.move,
+            "animation": self.my_robot.stretch,
+            "turn": self.my_robot.turn,
+            "mode": self.my_robot.mode,
+            "walk_toward": self.my_robot.arm,
+            "track_redball_with": self.my_robot.leg,
+            "wait": self.my_robot.idle,
+        }
 
         self.robot_actions = {
             "say": self.my_robot.say,
@@ -42,5 +48,10 @@ class RIZEAction(object):
             logging.error('There is a connection error')
 
 if __name__ == '__main__':
+    logging.basicConfig(
+        filename='../log/robot_actions.log',
+        level=logging.INFO,
+        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    )
     node = RIZEAction()
     node.run()
