@@ -36,10 +36,26 @@ class RIZEAction(object):
             logging.error('There is a connection error')
 
 if __name__ == '__main__':
-    logging.basicConfig(
-        filename='../log/robot_actions.log',
-        level=logging.INFO,
-        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-    )
+    # Set up the logger
+    logger = logging.getLogger()
+    logger.setLevel(logging.DEBUG)
+
+    # Define the format for the log messages
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
+    # Create a file handler
+    file_handler = logging.FileHandler('../log/robot_actions.log')
+    file_handler.setLevel(logging.INFO)
+    file_handler.setFormatter(formatter)
+
+    # Create a console handler
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(logging.INFO)
+    console_handler.setFormatter(formatter)
+
+#    Add the handlers to the logger
+    logger.addHandler(file_handler)
+    logger.addHandler(console_handler)
+
     node = RIZEAction()
     node.run()

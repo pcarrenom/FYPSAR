@@ -61,8 +61,8 @@ class Robot():
         except:
             volume = 50.0
         logger.info("volume: "+ str(volume))
-        # YanAPI.set_robot_volume_value(volume)
-        # YanAPI.start_voice_tts(value, interrupt=False)
+        YanAPI.set_robot_volume_value(volume)
+        YanAPI.start_voice_tts(value, interrupt=False)
         
         time.sleep(2)
         return "success"
