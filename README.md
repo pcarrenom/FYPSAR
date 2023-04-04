@@ -19,7 +19,7 @@ All Yanshee Robots connected remotely must have YanAPI.yan_api_init() function s
 
 ### Emergency Button
 In case of an emergency, push the button on the head of the robot.
-![Emergency](../data/images/Emergency_Stop.jpg)
+![Emergency](data/images/Emergency_Stop.jpg)
 
 ## Setting up the Environment and Basecode
 ### Minimum Requirements
@@ -61,7 +61,7 @@ It is recommended to create a virtual environment for development. This will hel
     $ npm install
     ```
 7. Add the following folder hierarchy to your Documents. All projects will be stored in ~Documents/Rize/projects
-![Directory](directory.png)
+![Directory](data/images/directory.png)
 8. Run RIZE using the following command
     ```console
     $ npm start
