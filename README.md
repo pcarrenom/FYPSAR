@@ -18,8 +18,8 @@ These are the Python scripts that are used to code the Yanshee Robot for the fin
 All Yanshee Robots connected remotely must have YanAPI.yan_api_init() function set up.
 
 ### Emergency Button
-In case of an emergency, push the button on the head of the robot.
-<img src="data/images/Emergency_Stop.jpg" alt="Emergency" width="400" height="300">
+In case of an emergency, push the button on the head of the robot. <br />
+<img src="data/images/Emergency_Stop.jpg" alt="Emergency" width="260">
 
 ## Setting up the Environment and Basecode
 ### Minimum Requirements
