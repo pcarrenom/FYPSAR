@@ -82,6 +82,7 @@ It is recommended to create a virtual environment for development. This will hel
     $ cd ~/New_Code
     ```
     In sequence, execute the following in each separate window: <br />
+    
     1. 
     ```console
     $ cd FYPSAR
