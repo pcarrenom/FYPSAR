@@ -55,46 +55,88 @@ class Robot():
         while YanAPI.get_voice_tts_state()['status'] != "idle":
             pass
 
-    def stretch_guide(stretch, speed):
+    def stretch_guide(self, stretch):
 
         if stretch == "HeadStretch":
             YanAPI.start_voice_tts("It's time to do a head stretch, Turn your head to the left and hold for 10 seconds.", interrupt=False)
+            self.speech_pause()
+            YanAPI.stop_voice_tts()
             time.sleep(10)
             YanAPI.start_voice_tts("Now, Turn your head to the right and hold for another 10 seconds.", interrupt=False)
+            self.speech_pause()
+            YanAPI.stop_voice_tts()
+            time.sleep(10)
+            YanAPI.start_voice_tts("I would recommend repeating for another few times.", interrupt=False)
+            self.speech_pause()
+            YanAPI.stop_voice_tts()
         elif stretch == "EyeRest":
             YanAPI.start_voice_tts("You have been looking at your screen for a long time. Please rest your eyes, look out of the window, look at the birds, look at the sky.", interrupt=False)
+            self.speech_pause()
+            YanAPI.stop_voice_tts()
         elif stretch == "ChinTuck":
             YanAPI.start_voice_tts("Now, I need you to have your head to follow the tip of my hands as you tuck your chin.", interrupt=False)
+            self.speech_pause()
+            YanAPI.stop_voice_tts()
         elif stretch == "UpperLower":
             YanAPI.start_voice_tts("Interlace your fingers. Turn your palm upwards above your head. Slowly turn to one side.", interrupt=False)
+            self.speech_pause()
+            YanAPI.stop_voice_tts()
             time.sleep(6)
             YanAPI.start_voice_tts("And the other side.", interrupt=False)
+            self.speech_pause()
+            YanAPI.stop_voice_tts()
         elif stretch == "ShoulderRoll":
             YanAPI.start_voice_tts("I need you to circle your shoulders as this is something that I can't do as a robot.", interrupt=False)
+            self.speech_pause()
+            YanAPI.stop_voice_tts()
         elif stretch == "HeadRoll":
             YanAPI.start_voice_tts("I need you to follow the tip of my hand. roll your head from your right to the left.", interrupt=False)
+            self.speech_pause()
+            YanAPI.stop_voice_tts()
             time.sleep(14)
             YanAPI.start_voice_tts("Now to the right.", interrupt=False)
+            self.speech_pause()
+            YanAPI.stop_voice_tts()
         elif stretch == "Pectoral":
             YanAPI.start_voice_tts("Now i need you to raise your arms and bend your elbows. Pull back and repeat.", interrupt=False)
+            self.speech_pause()
+            YanAPI.stop_voice_tts()
         elif stretch == "BackwardsArch":
             YanAPI.start_voice_tts("Support your lower back and arch. Hold..", interrupt=False)
+            self.speech_pause()
+            YanAPI.stop_voice_tts()
         elif stretch == "ShoulderStretch":
             YanAPI.start_voice_tts("Have your shoulders to the back and pull one elbow to one side", interrupt=False)
-            time.sleep(10)
+            self.speech_pause()
+            YanAPI.stop_voice_tts()
+            time.sleep(10.5)
             YanAPI.start_voice_tts("Now pull the other elbow to the other side", interrupt=False)
+            self.speech_pause()
+            YanAPI.stop_voice_tts()
         elif stretch == "HeelRaise":
             YanAPI.start_voice_tts("As a robot i can't do this. But i need you to raise your heels every now and then. Feel free to hold on a chair if it helps you.", interrupt=False)
+            self.speech_pause()
+            YanAPI.stop_voice_tts()
         elif stretch == "ForwardStretch":
             YanAPI.start_voice_tts("Clasp your hands in front of you and lower your head in line with your arms. Press forward and hold.", interrupt=False)
+            self.speech_pause()
+            YanAPI.stop_voice_tts()
         elif stretch == "SideBend":
             YanAPI.start_voice_tts("Place one hand on your hip and the other above your head. Lean to one side.", interrupt=False)
+            self.speech_pause()
+            YanAPI.stop_voice_tts()
             time.sleep(14)
             YanAPI.start_voice_tts("Now alternate and lean to the other side.", interrupt=False)
+            self.speech_pause()
+            YanAPI.stop_voice_tts()
         else:
             YanAPI.start_voice_tts("Have yourself doing this stretch when seated. Roll one of your foot.", interrupt=False)
+            self.speech_pause()
+            YanAPI.stop_voice_tts()
             time.sleep(11)
             YanAPI.start_voice_tts("Now roll the other foot", interrupt=False)
+            self.speech_pause()
+            YanAPI.stop_voice_tts()
  
 
     def say(self, value, parameters):
@@ -110,6 +152,8 @@ class Robot():
         logger.info("volume: "+ str(volume))
         YanAPI.set_robot_volume_value(int(volume))
         YanAPI.start_voice_tts(value, interrupt=False)
+        self.speech_pause()
+        YanAPI.stop_voice_tts()
         
         time.sleep(2)
         return "success"
@@ -133,43 +177,23 @@ class Robot():
             YanAPI.start_play_motion(name = 'walk', direction = direction)
             self.robot_pause()
     
-        YanAPI.start_play_motion(name = 'reset')
+        YanAPI.stop_play_motion()
         
         time.sleep(2)
         return "success"
 
     def stretch(self, value, parameters): #add repetition parameter
-        try:
-            speed = Robot.speeddict[parameters['speed']]
-        except:
-            speed = 'Normal'
-        logger.info("Speed: " + speed)
-        try:
-            repetition = int(parameters['repeat'])
-        except:
-            repetition = 1
-        logger.info("Repeat: " + str(repetition))
-        try:
-            guide = bool(parameters['guide'])
-        except:
-            guide = False
-        logger.info("Repeat: " + str(repetition))
+        speed = Robot.speeddict.get(parameters.get('speed', 'Normal'), 'Normal')
+        repetition = int(parameters.get('repeat', 1))
+        guide = bool(parameters.get('guide', False))
+        stretch = Robot.stretchdict.get(value, "HeadStretch")
+        logger.info("play "+ stretch+ " of speed " + speed + str(repetition) + " times, with guide " + str(guide))
+        YanAPI.start_play_motion(name = str(stretch + speed), repeat = repetition)
+        if guide:
+            self.stretch_guide(stretch)
+        self.robot_pause()
+        YanAPI.stop_play_motion()
 
-        try:
-            YanAPI.start_play_motion(name = str(Robot.stretchdict[value] + speed), repeat = repetition)
-            if guide:
-                self.stretch_guide(Robot.stretchdict[value], speed)
-            self.robot_pause()
-            YanAPI.start_play_motion(name = 'reset')
-            logger.info("played "+ Robot.stretchdict[value]+ speed)
-
-        except:
-            logger.error("stretch not recognised")
-            YanAPI.start_play_motion(name = str("HeadStretch" + speed), repeat = repetition) #play default stretch rather than voice
-            if guide:
-                self.stretch_guide("HeadStretch", speed)
-            self.robot_pause()
-            YanAPI.start_play_motion(name = "reset")
         return "success"
 
     def turn(self, value, parameters):
@@ -177,42 +201,35 @@ class Robot():
         try:
             if parameters['body'] == "head":
                 degrees = np.clip(int(parameters['degrees']), 0, 75)
+                logger.info("turn head to the " + value + " with " +  str(degrees) + " degrees")
             else:
-                degrees = parameters['degrees']
-        except KeyError:
-            pass
+                degrees = int(parameters['degrees'])
+                repeat = degrees // 90
+                logger.info("turn body  to the " + value + ", " +  str(repeat) + " times")
+        except:
+            parameters['body'] = "body"
+            repeat = 1
         
-        logger.info("turn " +  str(degrees) + " degrees")
-        try:
-            if value == "left":
-                logger.info("turn left")
-                if parameters['body'] == "head":
-                    logger.info("head turn")
-                    YanAPI.set_servos_angles({"NeckLR": (90-degrees)})
-                    self.robot_pause()
-                else:
-                    logger.info("body turn")
-                    YanAPI.start_play_motion(name='TurnLeft')
-                    self.robot_pause()
-                    YanAPI.start_play_motion(name='reset')
-
+        if value == "left":
+            if parameters['body'] == "head":
+                logger.info("head turn")
+                YanAPI.set_servos_angles({"NeckLR": (90-degrees)})
+                self.robot_pause()
             else:
-                logger.info("turn right")
-                if parameters['body'] == "head":
-                    logger.info("head turn")
-                    YanAPI.set_servos_angles({"NeckLR": (90+degrees)})
-                    self.robot_pause()
-                else:
-                    logger.info("body turn")
-                    YanAPI.start_play_motion(name='TurnRight')
-                    self.robot_pause()
-                    YanAPI.start_play_motion(name='reset')
-                
-        except KeyError:
-            logger.error("Default move")
-            YanAPI.start_play_motion(name='TurnRight')
-            self.robot_pause()
-            YanAPI.start_play_motion(name='reset')
+                logger.info("body turn")
+                YanAPI.start_play_motion(name='TurnLeft', repeat = repeat)
+                self.robot_pause()
+                YanAPI.stop_play_motion()
+
+        else:
+            if parameters['body'] == "head":
+                logger.info("head turn")
+                YanAPI.set_servos_angles({"NeckLR": (90+degrees)})
+                self.robot_pause()
+            else:
+                YanAPI.start_play_motion(name='TurnRight', repeat = repeat)
+                self.robot_pause()
+                YanAPI.stop_play_motion()
                 
         return "success"
     
@@ -221,12 +238,15 @@ class Robot():
         if value == "rest":
             YanAPI.start_play_motion(name = 'SleepMode')
             self.robot_pause()
+            YanAPI.stop_play_motion()
             logger.info("mode sleep")
         else:
             YanAPI.start_play_motion(name = 'Awake')
             self.robot_pause()
+            YanAPI.stop_play_motion()
             YanAPI.start_play_motion(name = 'reset')
             self.robot_pause()
+            YanAPI.stop_play_motion()
             logger.info("mode awake")
 
         return "success"
@@ -257,6 +277,7 @@ class Robot():
                 logger.info("left arm: " + str(left_arm) + " right arm: " + str(right_arm))
                 YanAPI.start_play_motion(name=arm_motion_map[value][(left_arm, right_arm)])
                 self.robot_pause()
+                YanAPI.stop_play_motion()
         except:
             logger.info("no arm")
             YanAPI.start_voice_tts("No arms chosen.", interrupt=True)
@@ -288,6 +309,7 @@ class Robot():
                 logger.info("left leg: " + str(left_leg) + " right leg: " + str(right_leg))
                 YanAPI.start_play_motion(name=leg_motion_map[value][(left_leg, right_leg)])
                 self.robot_pause()
+                YanAPI.stop_play_motion()
         except:
             logger.info("no leg")
             YanAPI.start_voice_tts("No leg chosen.", interrupt=True)

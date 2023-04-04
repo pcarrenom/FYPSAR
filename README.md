@@ -19,7 +19,7 @@ All Yanshee Robots connected remotely must have YanAPI.yan_api_init() function s
 
 ### Emergency Button
 In case of an emergency, push the button on the head of the robot.
-![Emergency](../data/images/Emergency_Stop.HEIC)
+![Emergency](../data/images/Emergency_Stop.jpg)
 
 ## Setting up the Environment and Basecode
 ### Minimum Requirements
@@ -48,7 +48,7 @@ It is recommended to create a virtual environment for development. This will hel
     ```console
     $ nvm install --lts
     ```
-4. Create a new folder called FYP_Code. Inside that folder, clone the following repo
+4. Create a new folder of any name (the name New_Code will be used as an example). Inside that folder, clone the following repo
     ```console
     $ git clone https://github.com/enriquecoronadozu/Open-RIZE-beta.git
     ```
@@ -61,8 +61,44 @@ It is recommended to create a virtual environment for development. This will hel
     $ npm install
     ```
 7. Add the following folder hierarchy to your Documents. All projects will be stored in ~Documents/Rize/projects
-
-8. Run RIZE using
+![Directory](directory.png)
+8. Run RIZE using the following command
     ```console
     $ npm start
+    ```
+
+### Base Code
+1. Create a new folder (The name New_Code is used as an example). Direct to it with the command
+    ```console
+    $ cd ~/New_Code
+    ```
+    and eventually clone the following repository with this command.
+    ```console
+    $ git clone https://github.com/jjah0001/FYPSAR
+    ```
+2. Using four windows in a terminal, activate your environment that you created earlier, then direct each terminal to your folder directory by typing the following to each window.
+    ```console
+    $ conda activate <name of your environment>
+    $ cd ~/New_Code
+    ```
+    In sequence, execute the following in each separate window:
+    1. 
+    ```console
+    $ cd FYPSAR
+    $ python local_master.py
+    ```
+    2. 
+    ```console
+    $ cd Open-RIZE-beta
+    $ npm start
+    ```
+    3. 
+    ```console
+    $ cd FYPSAR
+    $ python robot_actions.py
+    ```
+    4. 
+    ```console
+    $ cd FYPSAR
+    $ python robot_perception.py
     ```

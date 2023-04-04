@@ -9,7 +9,6 @@ with open('../config/config.json', 'r') as config_file:
 current_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.join(current_dir, config_data["directory"]["yan"])) 
 import YanAPI
-robot_ip = config_data["ip"]["robot"]
 
 #    初始化SDK
 # *  @param robot_ip  参数：机器人IP地址
@@ -17,22 +16,22 @@ robot_ip = config_data["ip"]["robot"]
 def robot_pause():
     while YanAPI.get_current_motion_play_state()['data']['status'] != "idle":
         pass
-
-def stretch_guide():
-    YanAPI.start_voice_tts("Have yourself doing this stretch when seated. Roll one of your foot.", interrupt=False)
-    time.sleep(11)
-    YanAPI.start_voice_tts("Now roll the other foot", interrupt=False)
-
-ip_addr = '160.69.69.103'
+def speech_pause():
+    while YanAPI.get_voice_tts_state()['status'] != "idle":
+        pass
+print("connected")
+ip_addr = config_data["ip"]["robot"]
 YanAPI.yan_api_init(ip_addr)
 #print(robot_actions)
-
-YanAPI.set_robot_volume_value(100)
+#0print(YanAPI.get_motion_list_value())
+#YanAPI.set_robot_volume_value(100)
 #YanAPI.set_robot_language('en')
-#YanAPI.start_play_motion(name = 'ActionAging1', speed = 'slow')
-#interrupt = input("Type X to stop: ")
 
-YanAPI.start_play_motion(name = 'FootRotationNormal')
-stretch_guide()
-robot_pause()
-YanAPI.start_play_motion(name = 'reset')
+
+YanAPI.start_voice_tts("It's time to do a head stretch, Turn your head to the left and hold for 10 seconds.", interrupt=False)
+speech_pause()
+YanAPI.stop_voice_tts()
+time.sleep(10)
+YanAPI.start_voice_tts("Now, Turn your head to the right and hold for another 10 seconds.", interrupt=False)
+speech_pause()
+YanAPI.stop_voice_tts()
