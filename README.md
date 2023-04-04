@@ -81,7 +81,8 @@ It is recommended to create a virtual environment for development. This will hel
     $ conda activate <name of your environment>
     $ cd ~/New_Code
     ```
-    In sequence, execute the following in each separate window: <br />
+    In sequence, execute the following in each separate window:
+    
     1. 
     ```console
     $ cd FYPSAR
