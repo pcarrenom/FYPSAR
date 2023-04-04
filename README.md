@@ -19,7 +19,7 @@ All Yanshee Robots connected remotely must have YanAPI.yan_api_init() function s
 
 ### Emergency Button
 In case of an emergency, push the button on the head of the robot.
-![Emergency](data/images/Emergency_Stop.jpg){400x300}
+<img src="data/images/Emergency_Stop.jpg" alt="Emergency" width="400" height="300">
 
 ## Setting up the Environment and Basecode
 ### Minimum Requirements
