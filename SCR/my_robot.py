@@ -24,7 +24,7 @@ class Robot():
         "headstretch": "HeadStretch",
         "wriststretch": "WristStretch",
         "elbowstretch": "ShoulderStretch",
-        "upperlowerstretch": "UpperLower",
+        "upperandlowerstretch": "UpperLower",
         "footrotation": "FootRotation",
         "forwardstretch": "ForwardStretch",
         "backarch": "BackwardsArch",
@@ -33,19 +33,29 @@ class Robot():
         "chintuck": "ChinTuck",
         "headroll": "HeadRoll",
         "shoulderroll": "ShoulderRoll",
-        "eyerest": "EyeRest"
+        "eyerest": "EyeRest",
+        "heelraise": "HeelRaise"
         }
 
-    speeddict = {
-        "slow": "Slow",
-        "normal": "Normal",
-        "fast": "Fast"
+    arm_motion = {
+        "leftForward":{"LeftShoulderRoll": 180, "LeftShoulderFlex": 0, "LeftElbowFlex": 90, "RightShoulderRoll":90,"RightShoulderFlex": 140,"RightElbowFlex":165},
+        "rightForward":{"RightShoulderRoll": 0, "RightShoulderFlex": 180, "RightElbowFlex": 90, "LeftShoulderRoll": 90, "LeftShoulderFlex": 40, "LeftElbowFlex": 15},
+        "bothForward":{"LeftShoulderRoll": 180, "LeftShoulderFlex": 0, "LeftElbowFlex": 90, "RightShoulderRoll": 0, "RightShoulderFlex": 180, "RightElbowFlex": 90},
+        "leftSide":{"LeftShoulderRoll": 90, "LeftShoulderFlex": 90, "LeftElbowFlex": 90, "RightShoulderRoll":90,"RightShoulderFlex": 140,"RightElbowFlex":165},
+        "rightSide":{"RightShoulderRoll": 90, "RightShoulderFlex": 90, "RightElbowFlex": 90, "LeftShoulderRoll": 90, "LeftShoulderFlex": 40, "LeftElbowFlex": 15},
+        "bothSide":{"LeftShoulderRoll": 90, "LeftShoulderFlex": 90, "LeftElbowFlex": 90, "RightShoulderRoll": 90, "RightShoulderFlex": 90, "RightElbowFlex": 90},
+        "leftUp":{"LeftShoulderRoll": 90, "LeftShoulderFlex": 170, "LeftElbowFlex": 100, "RightShoulderRoll":90,"RightShoulderFlex": 140,"RightElbowFlex":165},
+        "rightUp":{"RightShoulderRoll": 90, "RightShoulderFlex": 10, "RightElbowFlex": 80, "LeftShoulderRoll": 90, "LeftShoulderFlex": 40, "LeftElbowFlex": 15},
+        "bothUp":{"LeftShoulderRoll": 90, "LeftShoulderFlex": 170, "LeftElbowFlex": 100,"RightShoulderRoll": 90, "RightShoulderFlex": 10, "RightElbowFlex": 80},
+        "leftCrane":{"LeftShoulderRoll": 90, "LeftShoulderFlex": 135, "LeftElbowFlex": 5, "RightShoulderRoll":90,"RightShoulderFlex": 140,"RightElbowFlex":165},
+        "rightCrane":{"RightShoulderRoll": 90, "RightShoulderFlex": 45, "RightElbowFlex": 170, "LeftShoulderRoll": 90, "LeftShoulderFlex": 40, "LeftElbowFlex": 15},
+        "bothCrane":{"LeftShoulderRoll": 90, "LeftShoulderFlex": 135, "LeftElbowFlex": 5,"RightShoulderRoll": 90, "RightShoulderFlex": 45, "RightElbowFlex": 170}
     }
 
     def __init__(self, name):
         self.name = name
         YanAPI.yan_api_init(robot_ip)
-        #print("Robot Connected")
+        YanAPI.start_voice_tts("Robot Action actuated", interrupt=False)
 
     def robot_pause(self):
         while YanAPI.get_current_motion_play_state()['data']['status'] != "idle":
@@ -81,8 +91,10 @@ class Robot():
             YanAPI.start_voice_tts("Interlace your fingers. Turn your palm upwards above your head. Slowly turn to one side.", interrupt=False)
             self.speech_pause()
             YanAPI.stop_voice_tts()
-            time.sleep(6)
+            time.sleep(4.8)
             YanAPI.start_voice_tts("And the other side.", interrupt=False)
+            time.sleep(2)
+            YanAPI.start_voice_tts("Feel free to do it as many times as you wish.", interrupt=False)
             self.speech_pause()
             YanAPI.stop_voice_tts()
         elif stretch == "ShoulderRoll":
@@ -129,6 +141,8 @@ class Robot():
             YanAPI.start_voice_tts("Now alternate and lean to the other side.", interrupt=False)
             self.speech_pause()
             YanAPI.stop_voice_tts()
+        elif stretch == "WristStretch":
+            YanAPI.start_voice_tts("Now, bring your hands to the front and stretch one of your wrist to the front. Don't forget to alternate.", interrupt=False)
         else:
             YanAPI.start_voice_tts("Have yourself doing this stretch when seated. Roll one of your foot.", interrupt=False)
             self.speech_pause()
@@ -137,7 +151,94 @@ class Robot():
             YanAPI.start_voice_tts("Now roll the other foot", interrupt=False)
             self.speech_pause()
             YanAPI.stop_voice_tts()
- 
+    
+    def leg_motion(self, motion, timer):
+        if motion == "leftForward":
+            YanAPI.set_servos_angles({"RightAnkleUD":80,"RightAnkleFB":110,"RightKneeFlex":75,"RightHipFB":60,"LeftAnkleUD":60,"LeftAnkleFB":70,"LeftKneeFlex":105,"LeftHipFB":120}, 600)
+            time.sleep(0.6)
+            YanAPI.set_servos_angles({"RightAnkleUD":80,"RightAnkleFB":110,"RightKneeFlex":75,"RightHipFB":60,"RightHipLR":93,"LeftAnkleUD":90,"LeftAnkleFB":90,"LeftKneeFlex":25,"LeftHipFB":155,"LeftHipLR":88}, 1200)
+            time.sleep(1.2 + timer)
+            YanAPI.set_servos_angles({"RightAnkleUD":80,"RightAnkleFB":110,"RightKneeFlex":75,"RightHipFB":60,"RightHipLR":90,"LeftAnkleUD":60,"LeftAnkleFB":70,"LeftKneeFlex":105,"LeftHipFB":120,"LeftHipLR":90}, 1000)
+            time.sleep(1)
+            YanAPI.set_servos_angles({"RightAnkleUD":90,"RightAnkleFB":110,"RightKneeFlex":75,"RightHipFB":60,"RightHipLR":90,"LeftAnkleUD":90,"LeftAnkleFB":70,"LeftKneeFlex":105,"LeftHipFB":120,"LeftHipLR":90}, 600)
+            time.sleep(0.6)
+        elif motion == "rightForward":
+            YanAPI.set_servos_angles({"RightAnkleUD":120,"RightAnkleFB":110,"RightKneeFlex":75,"RightHipFB":60,"LeftAnkleUD":100,"LeftAnkleFB":70,"LeftKneeFlex":105,"LeftHipFB":120}, 600)
+            time.sleep(0.6)
+            YanAPI.set_servos_angles({"RightAnkleUD":90,"RightAnkleFB":90,"RightKneeFlex":155,"RightHipFB":25,"RightHipLR":93,"LeftAnkleUD":100,"LeftAnkleFB":75,"LeftKneeFlex":110,"LeftHipFB":120,"LeftHipLR":88}, 1200)
+            time.sleep(1.2 + timer)
+            YanAPI.set_servos_angles({"RightAnkleUD":120,"RightAnkleFB":110,"RightKneeFlex":75,"RightHipFB":60,"RightHipLR":90,"LeftAnkleUD":100,"LeftAnkleFB":70,"LeftKneeFlex":105,"LeftHipFB":120,"LeftHipLR":90}, 1000)
+            time.sleep(1)
+            YanAPI.set_servos_angles({"RightAnkleUD":90,"RightAnkleFB":110,"RightKneeFlex":75,"RightHipFB":60,"RightHipLR":90,"LeftAnkleUD":90,"LeftAnkleFB":70,"LeftKneeFlex":105,"LeftHipFB":120,"LeftHipLR":90}, 600)
+            time.sleep(0.6)
+        elif motion == "bothForward":
+            YanAPI.set_servos_angles({"RightAnkleUD":80,"RightAnkleFB":110,"RightKneeFlex":75,"RightHipFB":60,"LeftAnkleUD":60,"LeftAnkleFB":70,"LeftKneeFlex":105,"LeftHipFB":120}, 600)
+            time.sleep(0.6)
+            YanAPI.set_servos_angles({"RightAnkleUD":80,"RightAnkleFB":110,"RightKneeFlex":75,"RightHipFB":60,"RightHipLR":93,"LeftAnkleUD":90,"LeftAnkleFB":90,"LeftKneeFlex":25,"LeftHipFB":155,"LeftHipLR":88}, 1200)
+            time.sleep(1.2 + timer)
+            YanAPI.set_servos_angles({"RightAnkleUD":80,"RightAnkleFB":110,"RightKneeFlex":75,"RightHipFB":60,"RightHipLR":90,"LeftAnkleUD":60,"LeftAnkleFB":70,"LeftKneeFlex":105,"LeftHipFB":120,"LeftHipLR":90}, 1000)
+            time.sleep(1)
+            YanAPI.set_servos_angles({"RightAnkleUD":90,"RightAnkleFB":110,"RightKneeFlex":75,"RightHipFB":60,"RightHipLR":90,"LeftAnkleUD":90,"LeftAnkleFB":70,"LeftKneeFlex":105,"LeftHipFB":120,"LeftHipLR":90}, 600)
+            time.sleep(0.6)
+            YanAPI.set_servos_angles({"RightAnkleUD":120,"RightAnkleFB":110,"RightKneeFlex":75,"RightHipFB":60,"LeftAnkleUD":100,"LeftAnkleFB":70,"LeftKneeFlex":105,"LeftHipFB":120}, 600)
+            time.sleep(0.6)
+            YanAPI.set_servos_angles({"RightAnkleUD":90,"RightAnkleFB":90,"RightKneeFlex":155,"RightHipFB":25,"RightHipLR":93,"LeftAnkleUD":100,"LeftAnkleFB":75,"LeftKneeFlex":110,"LeftHipFB":120,"LeftHipLR":88}, 1200)
+            time.sleep(1.2 + timer)
+            YanAPI.set_servos_angles({"RightAnkleUD":120,"RightAnkleFB":110,"RightKneeFlex":75,"RightHipFB":60,"RightHipLR":90,"LeftAnkleUD":100,"LeftAnkleFB":70,"LeftKneeFlex":105,"LeftHipFB":120,"LeftHipLR":90}, 1000)
+            time.sleep(1)
+            YanAPI.set_servos_angles({"RightAnkleUD":90,"RightAnkleFB":110,"RightKneeFlex":75,"RightHipFB":60,"RightHipLR":90,"LeftAnkleUD":90,"LeftAnkleFB":70,"LeftKneeFlex":105,"LeftHipFB":120,"LeftHipLR":90}, 600)
+            time.sleep(0.6)
+        elif motion == "leftBackward":
+            YanAPI.set_servos_angles({"RightAnkleUD":80,"RightAnkleFB":110,"RightKneeFlex":75,"RightHipFB":60,"LeftAnkleUD":60,"LeftAnkleFB":70,"LeftKneeFlex":105,"LeftHipFB":120}, 600)
+            time.sleep(0.6)
+            YanAPI.set_servos_angles({"RightAnkleUD":77,"RightAnkleFB":112,"RightKneeFlex":75,"RightHipFB":60,"RightHipLR":93,"LeftAnkleUD":106,"LeftAnkleFB":180,"LeftKneeFlex":90,"LeftHipFB":154,"LeftHipLR":93}, 1000)
+            time.sleep(1)
+            YanAPI.set_servos_angles({"RightAnkleUD":82,"RightAnkleFB":112,"RightKneeFlex":75,"RightHipFB":60,"RightHipLR":93,"LeftAnkleUD":90,"LeftAnkleFB":90,"LeftKneeFlex":30,"LeftHipFB":0,"LeftHipLR":88}, 1200)
+            time.sleep(1.2 + timer)
+            YanAPI.set_servos_angles({"RightAnkleUD":77,"RightAnkleFB":112,"RightKneeFlex":75,"RightHipFB":60,"RightHipLR":93,"LeftAnkleUD":106,"LeftAnkleFB":180,"LeftKneeFlex":90,"LeftHipFB":154,"LeftHipLR":93}, 2000)
+            time.sleep(1.9)
+            YanAPI.set_servos_angles({"RightAnkleUD":80,"RightAnkleFB":110,"RightKneeFlex":75,"RightHipFB":60,"RightHipLR":90,"LeftAnkleUD":60,"LeftAnkleFB":70,"LeftKneeFlex":105,"LeftHipFB":120,"LeftHipLR":90}, 900)
+            time.sleep(0.8)
+            YanAPI.set_servos_angles({"RightAnkleUD":90,"RightAnkleFB":110,"RightKneeFlex":75,"RightHipFB":60,"RightHipLR":90,"LeftAnkleUD":90,"LeftAnkleFB":70,"LeftKneeFlex":105,"LeftHipFB":120,"LeftHipLR":90}, 600)
+            time.sleep(0.6)
+        elif motion == "rightBackward":
+            YanAPI.set_servos_angles({"RightAnkleUD":120,"RightAnkleFB":110,"RightKneeFlex":75,"RightHipFB":60,"LeftAnkleUD":102,"LeftAnkleFB":70,"LeftKneeFlex":103,"LeftHipFB":120}, 600)
+            time.sleep(0.6)
+            YanAPI.set_servos_angles({"RightAnkleUD":74,"RightAnkleFB":0,"RightKneeFlex":90,"RightHipFB":25,"RightHipLR":87,"LeftAnkleUD":103,"LeftAnkleFB":68,"LeftKneeFlex":104,"LeftHipFB":120,"LeftHipLR":86}, 1000)
+            time.sleep(1)
+            YanAPI.set_servos_angles({"RightAnkleUD":90,"RightAnkleFB":85,"RightKneeFlex":150,"RightHipFB":180,"RightHipLR":93,"LeftAnkleUD":98,"LeftAnkleFB":68,"LeftKneeFlex":104,"LeftHipFB":120,"LeftHipLR":86}, 1200)
+            time.sleep(1.2 + timer)
+            YanAPI.set_servos_angles({"RightAnkleUD":74,"RightAnkleFB":0,"RightKneeFlex":90,"RightHipFB":25,"RightHipLR":87,"LeftAnkleUD":103,"LeftAnkleFB":68,"LeftKneeFlex":104,"LeftHipFB":120,"LeftHipLR":86}, 2000)
+            time.sleep(1.9)
+            YanAPI.set_servos_angles({"RightAnkleUD":120,"RightAnkleFB":110,"RightKneeFlex":75,"RightHipFB":60,"LeftAnkleUD":102,"LeftAnkleFB":70,"LeftKneeFlex":103,"LeftHipFB":120}, 900)
+            time.sleep(0.8)
+            YanAPI.set_servos_angles({"RightAnkleUD":90,"RightAnkleFB":110,"RightKneeFlex":75,"RightHipFB":60,"RightHipLR":90,"LeftAnkleUD":90,"LeftAnkleFB":70,"LeftKneeFlex":105,"LeftHipFB":120,"LeftHipLR":90}, 600)
+            time.sleep(0.6)
+        elif motion == "bothBackward":
+            YanAPI.set_servos_angles({"RightAnkleUD":80,"RightAnkleFB":110,"RightKneeFlex":75,"RightHipFB":60,"LeftAnkleUD":60,"LeftAnkleFB":70,"LeftKneeFlex":105,"LeftHipFB":120}, 600)
+            time.sleep(0.6)
+            YanAPI.set_servos_angles({"RightAnkleUD":77,"RightAnkleFB":112,"RightKneeFlex":75,"RightHipFB":60,"RightHipLR":93,"LeftAnkleUD":106,"LeftAnkleFB":180,"LeftKneeFlex":90,"LeftHipFB":154,"LeftHipLR":93}, 1000)
+            time.sleep(1)
+            YanAPI.set_servos_angles({"RightAnkleUD":82,"RightAnkleFB":112,"RightKneeFlex":75,"RightHipFB":60,"RightHipLR":93,"LeftAnkleUD":90,"LeftAnkleFB":90,"LeftKneeFlex":30,"LeftHipFB":0,"LeftHipLR":88}, 1200)
+            time.sleep(1.2 + timer)
+            YanAPI.set_servos_angles({"RightAnkleUD":77,"RightAnkleFB":112,"RightKneeFlex":75,"RightHipFB":60,"RightHipLR":93,"LeftAnkleUD":106,"LeftAnkleFB":180,"LeftKneeFlex":90,"LeftHipFB":154,"LeftHipLR":93}, 2000)
+            time.sleep(1.9)
+            YanAPI.set_servos_angles({"RightAnkleUD":80,"RightAnkleFB":110,"RightKneeFlex":75,"RightHipFB":60,"RightHipLR":90,"LeftAnkleUD":60,"LeftAnkleFB":70,"LeftKneeFlex":105,"LeftHipFB":120,"LeftHipLR":90}, 900)
+            time.sleep(0.8)
+            YanAPI.set_servos_angles({"RightAnkleUD":90,"RightAnkleFB":110,"RightKneeFlex":75,"RightHipFB":60,"RightHipLR":90,"LeftAnkleUD":90,"LeftAnkleFB":70,"LeftKneeFlex":105,"LeftHipFB":120,"LeftHipLR":90}, 600)
+            time.sleep(0.6)
+            YanAPI.set_servos_angles({"RightAnkleUD":120,"RightAnkleFB":110,"RightKneeFlex":75,"RightHipFB":60,"LeftAnkleUD":102,"LeftAnkleFB":70,"LeftKneeFlex":103,"LeftHipFB":120}, 600)
+            time.sleep(0.6)
+            YanAPI.set_servos_angles({"RightAnkleUD":74,"RightAnkleFB":0,"RightKneeFlex":90,"RightHipFB":25,"RightHipLR":87,"LeftAnkleUD":103,"LeftAnkleFB":68,"LeftKneeFlex":104,"LeftHipFB":120,"LeftHipLR":86}, 1000)
+            time.sleep(1)
+            YanAPI.set_servos_angles({"RightAnkleUD":90,"RightAnkleFB":85,"RightKneeFlex":150,"RightHipFB":180,"RightHipLR":93,"LeftAnkleUD":98,"LeftAnkleFB":68,"LeftKneeFlex":104,"LeftHipFB":120,"LeftHipLR":86}, 1200)
+            time.sleep(1.2 + timer)
+            YanAPI.set_servos_angles({"RightAnkleUD":74,"RightAnkleFB":0,"RightKneeFlex":90,"RightHipFB":25,"RightHipLR":87,"LeftAnkleUD":103,"LeftAnkleFB":68,"LeftKneeFlex":104,"LeftHipFB":120,"LeftHipLR":86}, 2000)
+            time.sleep(1.9)
+            YanAPI.set_servos_angles({"RightAnkleUD":120,"RightAnkleFB":110,"RightKneeFlex":75,"RightHipFB":60,"LeftAnkleUD":102,"LeftAnkleFB":70,"LeftKneeFlex":103,"LeftHipFB":120}, 900)
+            time.sleep(0.8)
+            YanAPI.set_servos_angles({"RightAnkleUD":90,"RightAnkleFB":110,"RightKneeFlex":75,"RightHipFB":60,"RightHipLR":90,"LeftAnkleUD":90,"LeftAnkleFB":70,"LeftKneeFlex":105,"LeftHipFB":120,"LeftHipLR":90}, 600)
+            time.sleep(0.6)
 
     def say(self, value, parameters):
         #print("Value", value, "Parameters", parameters)
@@ -146,7 +247,7 @@ class Robot():
         logger.info("say "+ value)
         
         try:
-            volume = np.clip(int(parameters['velocity']), 0, 100)
+            volume = np.clip(int(parameters['volume']), 1, 100)
         except:
             volume = 50
         logger.info("volume: "+ str(volume))
@@ -161,20 +262,24 @@ class Robot():
     def move(self, value, parameters):
 
         try:
-            metre = float(parameters['meters'])
+            metre = np.absolute(float(parameters['meters']))
             repetition = int(metre//0.08)
         except:
             repetition = 1
-        eq_dict = {'backwards': 'backward', 'forwards': 'forward'}
-
-        if value not in ['backwards', 'forwards']:
+        eq_dict = {'backwards': 'backward', 'forwards': 'forward', 'left':'left', 'right':'right'}
+        speedlist = ['very slow','slow','normal','fast','very fast']
+        try:
+            speed_act = speedlist[int(np.clip(int(parameters['speed'])//20, 0, 4))]
+        except:
+            speed_act = 'normal'
+        if value not in ['backwards', 'forwards','left','right']:
             value = "forwards"
             
         direction = eq_dict[value]
 
-        logger.info("move "+ direction + " by " + str(repetition)+ " times")
+        logger.info("move "+ direction + " by " + str(repetition)+ " times, with speed " + speed_act)
         for i in range(repetition):
-            YanAPI.start_play_motion(name = 'walk', direction = direction)
+            YanAPI.start_play_motion(name = 'walk', direction = direction, speed = speed_act)
             self.robot_pause()
     
         YanAPI.stop_play_motion()
@@ -182,14 +287,22 @@ class Robot():
         time.sleep(2)
         return "success"
 
-    def stretch(self, value, parameters): #add repetition parameter
-        speed = Robot.speeddict.get(parameters.get('speed', 'Normal'), 'Normal')
-        repetition = int(parameters.get('repeat', 1))
+    def stretch(self, value, parameters):
+        speedlist = ['Slow','Normal','Fast']
+        try:
+            speed = speedlist[int(np.clip(int(parameters['speed'])//33, 0, 2))]
+        except:
+            speed = 'Normal'
+        try:
+            repetition = int(np.clip(int(parameters['repetition']), 1, 100))
+        except:
+            repetition = 1
         guide = bool(parameters.get('guide', False))
-        stretch = Robot.stretchdict.get(value, "HeadStretch")
-        logger.info("play "+ stretch+ " of speed " + speed + str(repetition) + " times, with guide " + str(guide))
+        stretch = Robot.stretchdict.get(value.strip().lower(), "HeadStretch")
+        logger.info("play "+ stretch+ " of speed " + speed +" " + str(repetition) + " times, with guide " + str(guide))
         YanAPI.start_play_motion(name = str(stretch + speed), repeat = repetition)
         if guide:
+            YanAPI.set_robot_volume_value(int(parameters.get('volume', 50)))
             self.stretch_guide(stretch)
         self.robot_pause()
         YanAPI.stop_play_motion()
@@ -199,7 +312,7 @@ class Robot():
     def turn(self, value, parameters):
         degrees = 0
         try:
-            if parameters['body'] == "head":
+            if parameters['body'] == 0:
                 degrees = np.clip(int(parameters['degrees']), 0, 75)
                 logger.info("turn head to the " + value + " with " +  str(degrees) + " degrees")
             else:
@@ -207,14 +320,15 @@ class Robot():
                 repeat = degrees // 90
                 logger.info("turn body  to the " + value + ", " +  str(repeat) + " times")
         except:
-            parameters['body'] = "body"
-            repeat = 1
+            parameters['body'] = 0
+            degrees = 70
+            logger.info("turn head to the " + value + " with " +  str(degrees) + " degrees")
         
         if value == "left":
-            if parameters['body'] == "head":
+            if parameters['body'] == 0:
                 logger.info("head turn")
-                YanAPI.set_servos_angles({"NeckLR": (90-degrees)})
-                self.robot_pause()
+                YanAPI.set_servos_angles({"NeckLR": (90-degrees)}, 2000)
+                time.sleep(2)
             else:
                 logger.info("body turn")
                 YanAPI.start_play_motion(name='TurnLeft', repeat = repeat)
@@ -222,10 +336,10 @@ class Robot():
                 YanAPI.stop_play_motion()
 
         else:
-            if parameters['body'] == "head":
+            if parameters['body'] == 0:
                 logger.info("head turn")
-                YanAPI.set_servos_angles({"NeckLR": (90+degrees)})
-                self.robot_pause()
+                YanAPI.set_servos_angles({"NeckLR": (90+degrees)}, 2000)
+                time.sleep(2)
             else:
                 YanAPI.start_play_motion(name='TurnRight', repeat = repeat)
                 self.robot_pause()
@@ -252,71 +366,78 @@ class Robot():
         return "success"
 
     def arm(self, value, parameters):
-        try:
-            left_arm = parameters.get('LeftArm', 0)
-            right_arm = parameters.get('RightArm', 0)
-            arm_motion_map = {
-                'side': {
-                    (1, 0): 'LeftArmSide',
-                    (0, 1): 'RightArmSide',
-                    (1, 1): 'BothArmSide'
-                },
-                'circle': {
-                    (1, 0): 'LeftArmCircle',
-                    (0, 1): 'RightArmCircle',
-                    (1, 1): 'BothArmCircle'
-                },
-                'forward': {
-                    (1, 0): 'LeftArmForward',
-                    (0, 1): 'RightArmForward',
-                    (1, 1): 'BothArmForward'
-                }
+        left_arm = bool(parameters.get('LeftArm', 0))
+        right_arm = bool(parameters.get('RightArm', 0))
+        arm_motion_map = {
+            'up': {
+                (1, 0): 'leftUp',
+                (0, 1): 'rightUp',
+                (1, 1): 'bothUp'
+            },
+            'side': {
+                (1, 0): 'leftSide',
+                (0, 1): 'rightSide',
+                (1, 1): 'bothSide'
+            },
+            'forward': {
+                (1, 0): 'leftForward',
+                (0, 1): 'rightForward',
+                (1, 1): 'bothForward'
+            },
+            'crane': {
+                (1, 0): 'leftCrane',
+                (0, 1): 'rightCrane',
+                (1, 1): 'bothCrane'
             }
-            if (left_arm, right_arm) in arm_motion_map.get(value, {}):
-                logger.info(value +" raise")
-                logger.info("left arm: " + str(left_arm) + " right arm: " + str(right_arm))
-                YanAPI.start_play_motion(name=arm_motion_map[value][(left_arm, right_arm)])
-                self.robot_pause()
-                YanAPI.stop_play_motion()
-        except:
+        }
+        if (left_arm, right_arm) in arm_motion_map.get(value, {}):
+            logger.info(value +" raise")
+            logger.info("left arm: " + str(left_arm) + " right arm: " + str(right_arm))
+            logger.info("leg motion played: " + str(arm_motion_map[value][(left_arm, right_arm)]))
+            YanAPI.set_servos_angles(self.arm_motion[arm_motion_map[value][(left_arm, right_arm)]], 2000)
+            time.sleep(2)
+        else:
             logger.info("no arm")
-            YanAPI.start_voice_tts("No arms chosen.", interrupt=True)
+            YanAPI.set_servos_angles(self.arm_motion['bothCrane'], 2000)
+            time.sleep(2)
         return "success"
 
     def leg(self, value, parameters):
-        try:
-            left_leg = parameters.get('LeftArm', 0)
-            right_leg = parameters.get('RightArm', 0)
-            leg_motion_map = {
-                'side': {
-                    (1, 0): 'LeftFootSide',
-                    (0, 1): 'RightFootSide',
-                    (1, 1): 'BothFootSide'
-                },
-                'backward': {
-                    (1, 0): 'LeftFootBack',
-                    (0, 1): 'RightFootBack',
-                    (1, 1): 'BothFootBack'
-                },
-                'forward': {
-                    (1, 0): 'LeftFootForward',
-                    (0, 1): 'RightFootForward',
-                    (1, 1): 'BothFootForward'
-                }
+
+        left_leg = bool(parameters.get('LeftLeg', 0))
+        right_leg = bool(parameters.get('RightLeg', 0))
+        time = float(parameters.get('remain_time', 5))
+        leg_motion_map = {
+            'backward': {
+                (1, 0): 'leftBackward',
+                (0, 1): 'rightBackward',
+                (1, 1): 'bothBackward'
+            },
+            'forward': {
+                (1, 0): 'leftForward',
+                (0, 1): 'rightForward',
+                (1, 1): 'bothForward'
             }
-            if (left_leg, right_leg) in leg_motion_map.get(value, {}):
-                logger.info(value +" raise")
-                logger.info("left leg: " + str(left_leg) + " right leg: " + str(right_leg))
-                YanAPI.start_play_motion(name=leg_motion_map[value][(left_leg, right_leg)])
-                self.robot_pause()
-                YanAPI.stop_play_motion()
-        except:
+        }
+        if (left_leg, right_leg) in leg_motion_map.get(value, {}):
+            logger.info(value +" raise")
+            logger.info("left leg: " + str(left_leg) + " right leg: " + str(right_leg))
+            logger.info("leg motion played: " + str(leg_motion_map[value][(left_leg, right_leg)]) + " for "+ str(time) + " seconds")
+            self.leg_motion(leg_motion_map[value][(left_leg, right_leg)],time)
+
+        else:
             logger.info("no leg")
-            YanAPI.start_voice_tts("No leg chosen.", interrupt=True)
+            self.leg_motion('bothForward')
 
         return "success"
 
     def idle(self, value, parameters):
         logger.info("idle for " + value)
         time.sleep(int(value))
+        return "success"
+    
+    def reset(self, value, parameters):
+        YanAPI.start_play_motion(name = 'reset')
+        self.robot_pause()
+        YanAPI.stop_play_motion()
         return "success"
