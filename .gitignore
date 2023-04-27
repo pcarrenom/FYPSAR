@@ -1,5 +1,6 @@
 __pycache__
-*/__pycache__
 .DS_Store
-*/.DS_Store
-*/SCR/movement_source_code.py
+t2s.py
+movement_source_code.py
+node_modules
+dist
