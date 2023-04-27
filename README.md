@@ -39,7 +39,10 @@ It is recommended to create a virtual environment for development. This will hel
     $ conda activate <name of your environment>
     $ pip install nep transitions rize
     ```
-3. Additional dependencies to work with the Yanshee robot might be needed
+3. Additional dependencies to work with the Yanshee robot might be needed, such as python 3.5
+    ```console
+    $ pip install python=3.5
+    ```
 
 ### Node and RIZE Interface
 1. Follow these instructions to install nvm https://github.com/nvm-sh/nvm#install--update-script
@@ -67,7 +70,7 @@ It is recommended to create a virtual environment for development. This will hel
     $ npm start
     ```
 
-### Base Code
+### Base Code and RIZE Interface
 1. Create a new folder (The name New_Code is used as an example). Direct to it with the command
     ```console
     $ cd ~/New_Code
@@ -76,7 +79,23 @@ It is recommended to create a virtual environment for development. This will hel
     ```console
     $ git clone https://github.com/jjah0001/FYPSAR
     ```
-2. Using four windows in a terminal, activate your environment that you created earlier, then direct each terminal to your folder directory by typing the following to each window.
+2. Follow these instructions to install nvm https://github.com/nvm-sh/nvm#install--update-script
+3. Close the terminal used to install nvm and open a new one
+4. Install the latest stable version of Node.js
+    ```console
+    $ nvm install --lts
+    ```
+5. Activate the latest version of Node.js in your terminal
+    ```console
+    $ nvm use --lts
+    ```
+6. Go to the Open-RIZE-beta folder and install all required dependencies
+    ```console
+    $ npm install
+    ```
+7. Add the following folder hierarchy to your Documents. All projects will be stored in ~Documents/Rize/projects
+![Directory](data/images/directory.png)
+8. Using four windows in a terminal, activate your environment that you created earlier, then direct each terminal to your folder directory by typing the following to each window.
     ```console
     $ conda activate <name of your environment>
     $ cd ~/New_Code
@@ -85,21 +104,21 @@ It is recommended to create a virtual environment for development. This will hel
     
     1. 
     ```console
-    $ cd FYPSAR
+    $ cd FYPSAR/SCR
     $ python local_master.py
     ```
     2. 
     ```console
-    $ cd Open-RIZE-beta
+    $ cd FYPSAR/RIZE
     $ npm start
     ```
     3. 
     ```console
-    $ cd FYPSAR
+    $ cd FYPSAR/SCR
     $ python robot_actions.py
     ```
     4. 
     ```console
-    $ cd FYPSAR
+    $ cd FYPSAR/SCR
     $ python robot_perception.py
     ```
