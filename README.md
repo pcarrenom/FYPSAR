@@ -44,32 +44,6 @@ It is recommended to create a virtual environment for development. This will hel
     $ pip install python=3.5
     ```
 
-### Node and RIZE Interface
-1. Follow these instructions to install nvm https://github.com/nvm-sh/nvm#install--update-script
-2. Close the terminal used to install nvm and open a new one
-3. Install the latest stable version of Node.js
-    ```console
-    $ nvm install --lts
-    ```
-4. Create a new folder of any name (the name New_Code will be used as an example). Inside that folder, clone the following repo
-    ```console
-    $ git clone https://github.com/enriquecoronadozu/Open-RIZE-beta.git
-    ```
-5. Activate the latest version of Node.js in your terminal
-    ```console
-    $ nvm use --lts
-    ```
-6. Go to the Open-RIZE-beta folder and install all required dependencies
-    ```console
-    $ npm install
-    ```
-7. Add the following folder hierarchy to your Documents. All projects will be stored in ~Documents/Rize/projects
-![Directory](data/images/directory.png)
-8. Run RIZE using the following command
-    ```console
-    $ npm start
-    ```
-
 ### Base Code and RIZE Interface
 1. Create a new folder (The name New_Code is used as an example). Direct to it with the command
     ```console
