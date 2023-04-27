@@ -39,9 +39,13 @@ It is recommended to create a virtual environment for development. This will hel
     $ conda activate <name of your environment>
     $ pip install nep transitions rize
     ```
-3. Additional dependencies to work with the Yanshee robot might be needed, such as python 3.5
+3. Additional dependencies to work with the Yanshee robot might be needed, such as python 3.5 or numpy
     ```console
     $ pip install python=3.5
+    $ pip install numpy
+    $ pip install os
+    $ pip install sys
+    $ pip install json
     ```
 
 ### Base Code and RIZE Interface
