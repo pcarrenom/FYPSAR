@@ -317,8 +317,8 @@ class Robot():
                 logger.info("turn head to the " + value + " with " +  str(degrees) + " degrees")
             else:
                 degrees = int(parameters['degrees'])
-                repeat = degrees // 90
-                logger.info("turn body  to the " + value + ", " +  str(repeat) + " times")
+                repeat = int(np.clip(degrees // 180, 1, None))
+                logger.info("turn body to the " + value + ", " +  str(repeat) + " times")
         except:
             parameters['body'] = 0
             degrees = 70
@@ -327,7 +327,7 @@ class Robot():
         if value == "left":
             if parameters['body'] == 0:
                 logger.info("head turn")
-                YanAPI.set_servos_angles({"NeckLR": (90-degrees)}, 2000)
+                YanAPI.set_servos_angles({"NeckLR": (90-int(degrees))}, 2000)
                 time.sleep(2)
             else:
                 logger.info("body turn")
@@ -338,8 +338,8 @@ class Robot():
         else:
             if parameters['body'] == 0:
                 logger.info("head turn")
-                YanAPI.set_servos_angles({"NeckLR": (90+degrees)}, 2000)
-                time.sleep(2)
+                YanAPI.set_servos_angles({"NeckLR": (90+int(degrees))}, 800)
+                time.sleep(0.8)
             else:
                 YanAPI.start_play_motion(name='TurnRight', repeat = repeat)
                 self.robot_pause()

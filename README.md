@@ -46,6 +46,9 @@ It is recommended to create a virtual environment for development. This will hel
     $ pip install os
     $ pip install sys
     $ pip install json
+    $ pip install logging
+    $ pip install time
+    $ pip install zmq
     ```
 
 ### Base Code and RIZE Interface
