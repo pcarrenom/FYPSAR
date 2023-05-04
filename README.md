@@ -79,27 +79,27 @@ It is recommended to create a virtual environment for development. This will hel
 8. Using four windows in a terminal, activate your environment that you created earlier, then direct each terminal to your folder directory by typing the following to each window.
     ```console
     $ conda activate <name of your environment>
-    $ cd ~/New_Code
+    $ cd ~/New_Code/FYPSAR
     ```
     In sequence, execute the following in each separate window:
     
     1. 
     ```console
-    $ cd FYPSAR/SCR
+    $ cd SCR
     $ python local_master.py
     ```
     2. 
     ```console
-    $ cd FYPSAR/RIZE
+    $ cd RIZE
     $ npm start
     ```
     3. 
     ```console
-    $ cd FYPSAR/SCR
+    $ cd SCR
     $ python robot_actions.py
     ```
     4. 
     ```console
-    $ cd FYPSAR/SCR
+    $ cd SCR
     $ python robot_perception.py
     ```
