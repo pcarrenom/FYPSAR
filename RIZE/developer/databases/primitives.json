@@ -1,18 +1,33 @@
 {
     "arm":{
-        "description":"Perform an stretch",
+        "description":"move the arms",
         "input":"dropdown",
         "input_options":[
-            "up",
             "side",
             "forward",
+            "up",
             "crane"
         ],
         "options":{
             "LeftArm":"bool",
             "RightArm":"bool"
         },
-        "primitive":"Raise arm",
+        "primitive":"Move arm",
+        "type":"output"
+    },
+    "elbow":{
+        "description":"move the arms",
+        "input":"dropdown",
+        "input_options":[
+            "flexion",
+            "extension"
+        ],
+        "options":{
+            "LeftArm":"bool",
+            "RightArm":"bool",
+            "angle":"degrees"
+        },
+        "primitive":"Move elbow",
         "type":"output"
     },
     "leg":{
@@ -20,12 +35,12 @@
         "input":"dropdown",
         "input_options":[
             "forward",
-            "backward"
+            "backwards"
         ],
         "options":{
             "LeftLeg":"bool",
             "RightLeg":"bool",
-            "remain_time":"seconds"
+            "hold_time":"seconds"
         },
         "primitive":"Raise leg",
         "type":"output"
@@ -54,6 +69,36 @@
         "primitive":"Say",
         "type":"output"
     },
+    "shoulder":{
+        "description":"move the shoulders",
+        "input":"dropdown",
+        "input_options":[
+            "side",
+            "forward",
+            "backwards"
+        ],
+        "options":{
+            "LeftArm":"bool",
+            "RightArm":"bool",
+            "angle":"degrees"
+        },
+        "primitive":"Move shoulder",
+        "type":"output"
+    },
+    "sidestep":{
+        "description":"Make robot walk sideways",
+        "input":"dropdown",
+        "input_options":[
+            "left",
+            "right"
+        ],
+        "options":{
+            "speed":"percentage",
+            "steps":"number"
+        },
+        "primitive":"Side step",
+        "type":"output"
+    },
     "stretch":{
         "description":"Perform an stretch",
         "input":"dropdown",
@@ -74,8 +119,8 @@
             "HeelRaise"
         ],
         "options":{
-            "guide":"bool",
             "repetition":"number",
+            "speechGuide":"bool",
             "speed":"percentage",
             "volume":"percentage"
         },
@@ -102,7 +147,8 @@
         ],
         "options":{
             "body":"bool",
-            "degrees":"degrees"
+            "degrees":"degrees",
+            "head":"bool"
         },
         "primitive":"Turn",
         "type":"output"
@@ -117,14 +163,12 @@
         "description":"Make robot walk",
         "input":"dropdown",
         "input_options":[
-            "forwards",
-            "backwards",
-            "left",
-            "right"
+            "forward",
+            "backwards"
         ],
         "options":{
-            "meters":"meters",
-            "speed":"percentage"
+            "speed":"percentage",
+            "steps":"number"
         },
         "primitive":"Walk",
         "type":"output"

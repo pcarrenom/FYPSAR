@@ -13,10 +13,13 @@ class RIZEAction(object):
         self.robot_actions = {
             "say": self.my_robot.say,
             "walk": self.my_robot.move,
+            "sidestep": self.my_robot.move,
             "stretch": self.my_robot.stretch,
             "turn": self.my_robot.turn,
             "mode": self.my_robot.mode,
             "arm": self.my_robot.arm,
+            "shoulder": self.my_robot.shoulder,
+            "elbow": self.my_robot.elbow,
             "leg": self.my_robot.leg,
             "wait": self.my_robot.idle,
             "reset": self.my_robot.reset,

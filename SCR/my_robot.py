@@ -20,6 +20,72 @@ robot_ip = config_data["ip"]["robot"] #Must use config file
 
 
 class Robot():
+    walkingdict = {
+        'steady':{
+            "RightHipLR":90,
+            "RightHipFB":34,
+            "RightKneeFlex":25,
+            "RightAnkleFB":137,
+            "RightAnkleUD":90,
+            "LeftHipLR":90,
+            "LeftHipFB":147,
+            "LeftKneeFlex":156,
+            "LeftAnkleFB":45,
+            "LeftAnkleUD":90         #Get Robot Ready
+        },
+        'leftForward':{
+            "RightHipLR":98,
+            "RightHipFB":46,
+            "RightKneeFlex":35,
+            "RightAnkleFB":135,
+            "RightAnkleUD":78,
+            "LeftHipLR":102,
+            "LeftHipFB":150,
+            "LeftKneeFlex":147,
+            "LeftAnkleFB":60,
+            "LeftAnkleUD":70
+           #Lifts Left Foot forward
+        },
+        'leftBackward':{
+            "RightHipLR":99,
+            "RightHipFB":32,
+            "RightKneeFlex":28,
+            "RightAnkleFB":128,
+            "RightAnkleUD":78,
+            "LeftHipLR":102,
+            "LeftHipFB":129,
+            "LeftKneeFlex":156,
+            "LeftAnkleFB":30,
+            "LeftAnkleUD":65            #Lifts Left Foot backwards
+        },
+
+        'rightBackward':{
+            "RightHipLR":73,
+            "RightHipFB":55,
+            "RightKneeFlex":26,
+            "RightAnkleFB":159,
+            "RightAnkleUD":113,
+            "LeftHipLR":79,
+            "LeftHipFB":148,
+            "LeftKneeFlex":152,
+            "LeftAnkleFB":49,
+            "LeftAnkleUD":100              #Lifts Right foot backwards
+        },
+
+        'rightForward':{
+            "RightHipLR":78,
+            "RightHipFB":30,
+            "RightKneeFlex":40,
+            "RightAnkleFB":117,
+            "RightAnkleUD":104,
+            "LeftHipLR":82,
+            "LeftHipFB":131,
+            "LeftKneeFlex":143,
+            "LeftAnkleFB":45,
+            "LeftAnkleUD":100          #Lifts Right foot forward
+        }
+    }
+
     stretchdict = {
         "headstretch": "HeadStretch",
         "wriststretch": "WristStretch",
@@ -55,7 +121,9 @@ class Robot():
     def __init__(self, name):
         self.name = name
         YanAPI.yan_api_init(robot_ip)
-        YanAPI.start_voice_tts("Robot Action actuated", interrupt=False)
+        YanAPI.start_voice_tts("I have successfully connected to Robot Actions.", interrupt=False)
+        YanAPI.set_robot_led("button", "purple", "on")
+        YanAPI.start_play_motion(name='reset')
 
     def robot_pause(self):
         while YanAPI.get_current_motion_play_state()['data']['status'] != "idle":
@@ -65,8 +133,32 @@ class Robot():
         while YanAPI.get_voice_tts_state()['status'] != "idle":
             pass
 
-    def stretch_guide(self, stretch):
+    def my_walk(self, speedLevel, direction, steps):
+        speed = round(-8.56*speedLevel + 1086)
+        YanAPI.set_servos_angles(Robot.walkingdict['steady'],300)
+        time.sleep(0.25)
+        if direction == 'forward':
+            for i in range(steps):
+                YanAPI.set_servos_angles(Robot.walkingdict['leftBackward'],speed)
+                time.sleep(speed/2000)
+                YanAPI.set_servos_angles(Robot.walkingdict['leftForward'],round(speed*0.9))
+                time.sleep(speed*0.84/2000)
+                YanAPI.set_servos_angles(Robot.walkingdict['rightBackward'],speed)
+                time.sleep(speed/2000)
+                YanAPI.set_servos_angles(Robot.walkingdict['rightForward'],round(speed*0.9))
+                time.sleep(speed*0.84/2000)
+        else:
+            for i in range(steps):
+                YanAPI.set_servos_angles(Robot.walkingdict['leftForward'],speed)
+                time.sleep(speed/2000)
+                YanAPI.set_servos_angles(Robot.walkingdict['leftBackward'],round(speed*0.9))
+                time.sleep(speed*0.84/2000)
+                YanAPI.set_servos_angles(Robot.walkingdict['rightForward'],speed)
+                time.sleep(speed/2000)
+                YanAPI.set_servos_angles(Robot.walkingdict['rightBackward'],round(speed*0.9))
+                time.sleep(speed*0.84/2000)
 
+    def stretch_guide(self, stretch):
         if stretch == "HeadStretch":
             YanAPI.start_voice_tts("It's time to do a head stretch, Turn your head to the left and hold for 10 seconds.", interrupt=False)
             self.speech_pause()
@@ -260,27 +352,27 @@ class Robot():
         return "success"
 
     def move(self, value, parameters):
-
         try:
-            metre = np.absolute(float(parameters['meters']))
-            repetition = int(metre//0.08)
+            steps = int(parameters.get('steps', 1))
         except:
-            repetition = 1
-        eq_dict = {'backwards': 'backward', 'forwards': 'forward', 'left':'left', 'right':'right'}
-        speedlist = ['very slow','slow','normal','fast','very fast']
+            steps = 1
         try:
-            speed_act = speedlist[int(np.clip(int(parameters['speed'])//20, 0, 4))]
+            speed_act = int(np.clip(int(parameters['speed']), 1, 100))
         except:
-            speed_act = 'normal'
-        if value not in ['backwards', 'forwards','left','right']:
-            value = "forwards"
+            speed_act = 50
+        speed_dict = {0: "very slow", 1: "slow", 2: "normal", 3: "fast", 4: "very fast"}
+        if value not in ['backwards','forward','left','right']:
+            value = "forward"
             
-        direction = eq_dict[value]
 
-        logger.info("move "+ direction + " by " + str(repetition)+ " times, with speed " + speed_act)
-        for i in range(repetition):
-            YanAPI.start_play_motion(name = 'walk', direction = direction, speed = speed_act)
-            self.robot_pause()
+        logger.info("move "+ value + " by " + str(steps)+ " times, with speed " + str(speed_act))
+        if value == "forward" or value == "backwards":
+            self.my_walk(speed_act, value, steps)
+        else:
+            for i in range(steps):
+                speedString = speed_dict.get(np.clip(speed_act//5, 0, 4))
+                YanAPI.start_play_motion(name = 'walk', direction = value, speed = speedString)
+                self.robot_pause()
     
         YanAPI.stop_play_motion()
         
@@ -297,7 +389,7 @@ class Robot():
             repetition = int(np.clip(int(parameters['repetition']), 1, 100))
         except:
             repetition = 1
-        guide = bool(parameters.get('guide', False))
+        guide = bool(parameters.get('speechGuide', False))
         stretch = Robot.stretchdict.get(value.strip().lower(), "HeadStretch")
         logger.info("play "+ stretch+ " of speed " + speed +" " + str(repetition) + " times, with guide " + str(guide))
         YanAPI.start_play_motion(name = str(stretch + speed), repeat = repetition)
@@ -311,39 +403,44 @@ class Robot():
 
     def turn(self, value, parameters):
         degrees = 0
-        try:
-            if parameters['body'] == 0:
-                degrees = np.clip(int(parameters['degrees']), 0, 75)
-                logger.info("turn head to the " + value + " with " +  str(degrees) + " degrees")
-            else:
-                degrees = int(parameters['degrees'])
-                repeat = int(np.clip(degrees // 180, 1, None))
-                logger.info("turn body to the " + value + ", " +  str(repeat) + " times")
-        except:
-            parameters['body'] = 0
-            degrees = 70
+        body = bool(parameters.get('body',0))
+        head = bool(parameters.get('head',0))
+        if body == 0 and head == 1:
+            degrees = int(np.clip(int(parameters.get(degrees,70)), 0 ,75))
             logger.info("turn head to the " + value + " with " +  str(degrees) + " degrees")
+        elif body == 1:
+            degrees = int(np.minimum(int(parameters.get(degrees,180)), 0))
+            repeat = int(np.clip(degrees // 180, 1, None))
+            logger.info("turn body to the " + value + ", " +  str(repeat) + " times")
+        else:
+            body = 0
+            head = 1
+            degrees = int(np.clip(int(parameters.get(degrees,70)), 0 ,75))
+            logger.info("Default try turn head to the " + value + " with " +  str(degrees) + " degrees")
+            
         
         if value == "left":
-            if parameters['body'] == 0:
-                logger.info("head turn")
-                YanAPI.set_servos_angles({"NeckLR": (90-int(degrees))}, 2000)
-                time.sleep(2)
-            else:
+            if body == 1:
                 logger.info("body turn")
                 YanAPI.start_play_motion(name='TurnLeft', repeat = repeat)
                 self.robot_pause()
                 YanAPI.stop_play_motion()
+                
+            else:
+                logger.info("head turn")
+                YanAPI.set_servos_angles({"NeckLR": (90-int(degrees))}, 2000)
+                time.sleep(2)
 
         else:
-            if parameters['body'] == 0:
-                logger.info("head turn")
-                YanAPI.set_servos_angles({"NeckLR": (90+int(degrees))}, 800)
-                time.sleep(0.8)
-            else:
+            if body == 1:
+                logger.info("body turn")
                 YanAPI.start_play_motion(name='TurnRight', repeat = repeat)
                 self.robot_pause()
                 YanAPI.stop_play_motion()
+            else:
+                logger.info("head turn")
+                YanAPI.set_servos_angles({"NeckLR": (90+int(degrees))}, 800)
+                time.sleep(0.8)
                 
         return "success"
     
@@ -352,13 +449,9 @@ class Robot():
         if value == "rest":
             YanAPI.start_play_motion(name = 'SleepMode')
             self.robot_pause()
-            YanAPI.stop_play_motion()
             logger.info("mode sleep")
         else:
             YanAPI.start_play_motion(name = 'Awake')
-            self.robot_pause()
-            YanAPI.stop_play_motion()
-            YanAPI.start_play_motion(name = 'reset')
             self.robot_pause()
             YanAPI.stop_play_motion()
             logger.info("mode awake")
@@ -401,14 +494,61 @@ class Robot():
             YanAPI.set_servos_angles(self.arm_motion['bothCrane'], 2000)
             time.sleep(2)
         return "success"
+    
+    def shoulder(self, value, parameters):
+        left_arm = bool(parameters.get('LeftArm', 0))
+        right_arm = bool(parameters.get('RightArm', 0))
+        if value not in ['forward','side','backwards']:
+            value = 'forward'
+        logger.info(value +" raise " + " with left arm " + str(left_arm) + " and right arm " + str(right_arm))
+        if value == 'side':
+            angle = int(np.clip(int(parameters.get('angle', 0)),0,180))
+            logger.info("angle value: " + str(angle))
+            if left_arm == 1:
+                YanAPI.set_servos_angles({"LeftShoulderRoll": 90, "LeftShoulderFlex": angle},2000)
+            if right_arm == 1:
+                YanAPI.set_servos_angles({"RightShoulderRoll":90,"RightShoulderFlex": 180-angle},2000)
+            time.sleep(2)
+        else:
+            angle = int(np.clip(int(parameters.get('angle', 0)),0,90))
+            if value == "backwards":
+                angle = -angle
+            logger.info("angle value: " + str(angle))
+            if left_arm == 1:
+                YanAPI.set_servos_angles({"LeftShoulderRoll":180, "LeftShoulderFlex": 90-angle},2000)
+            if right_arm == 1:
+                YanAPI.set_servos_angles({"RightShoulderRoll":0,"RightShoulderFlex": 90+angle},2000)
+            time.sleep(2)
+
+    def elbow(self, value, parameters):
+        left_arm = bool(parameters.get('LeftArm', 0))
+        right_arm = bool(parameters.get('RightArm', 0))
+        logger.info(value +" raise " + " with left arm " + str(left_arm) + " and right arm " + str(right_arm))
+        #left_shoulder = YanAPI.get_servo_angle_value("LeftShoulderFlex")
+        #right_shoulder = YanAPI.get_servo_angle_value("RightShoulderFlex")
+        if value not in ['flexion','extension']:
+            value = 'flexion'
+        angle = int(np.clip(int(parameters.get('angle', 0)),0,90))
+        if value == 'extension':
+            angle = -angle
+        #else:
+        #    if right_arm == 1 and right_shoulder > 135 and angle > (180-right_shoulder):
+        #        angle = 180-right_shoulder
+        #    elif left_arm == 1 and left_shoulder < 45 and angle > left_shoulder:
+        #        angle = left_shoulder
+        if left_arm == 1:
+            YanAPI.set_servos_angles({"LeftElbowFlex": 90-angle},2000)
+        if right_arm == 1:
+            YanAPI.set_servos_angles({"RightElbowFlex": 90+angle},2000)
+        time.sleep(2)
 
     def leg(self, value, parameters):
 
         left_leg = bool(parameters.get('LeftLeg', 0))
         right_leg = bool(parameters.get('RightLeg', 0))
-        time = float(parameters.get('remain_time', 5))
+        time = float(parameters.get('hold_time', 5))
         leg_motion_map = {
-            'backward': {
+            'backwards': {
                 (1, 0): 'leftBackward',
                 (0, 1): 'rightBackward',
                 (1, 1): 'bothBackward'
@@ -437,6 +577,7 @@ class Robot():
         return "success"
     
     def reset(self, value, parameters):
+        logger.info("Robot resets")
         YanAPI.start_play_motion(name = 'reset')
         self.robot_pause()
         YanAPI.stop_play_motion()

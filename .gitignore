@@ -5,3 +5,4 @@ movement_source_code.py
 node_modules
 dist
 parallel_motion_test.py
+test.py

@@ -45,6 +45,21 @@ init: function() {
  	this.setHelpUrl("");
 }};
 
+Blockly.Blocks["shoulder"] = {
+init: function() {
+	this.appendDummyInput()
+		.appendField("Move shoulder")
+		.appendField(new Blockly.FieldTextInput("edit"), "inp_1")
+		.appendField(" options")
+		.appendField(new Blockly.FieldTextInput("edit"), "inp_2")
+		.appendField(new Blockly.FieldImage(configuration_image, 16, 16, "*", edit_primitive))		;
+	this.setColour("#2196f3");
+	this.setOutput(true,['action']);
+
+	this.setTooltip("move the shoulders");
+ 	this.setHelpUrl("");
+}};
+
 Blockly.Blocks["stretch"] = {
 init: function() {
 	this.appendDummyInput()
@@ -78,7 +93,7 @@ init: function() {
 Blockly.Blocks["arm"] = {
 init: function() {
 	this.appendDummyInput()
-		.appendField("Raise arm")
+		.appendField("Move arm")
 		.appendField(new Blockly.FieldTextInput("edit"), "inp_1")
 		.appendField(" options")
 		.appendField(new Blockly.FieldTextInput("edit"), "inp_2")
@@ -86,7 +101,22 @@ init: function() {
 	this.setColour("#2196f3");
 	this.setOutput(true,['action']);
 
-	this.setTooltip("Perform an stretch");
+	this.setTooltip("move the arms");
+ 	this.setHelpUrl("");
+}};
+
+Blockly.Blocks["elbow"] = {
+init: function() {
+	this.appendDummyInput()
+		.appendField("Move elbow")
+		.appendField(new Blockly.FieldTextInput("edit"), "inp_1")
+		.appendField(" options")
+		.appendField(new Blockly.FieldTextInput("edit"), "inp_2")
+		.appendField(new Blockly.FieldImage(configuration_image, 16, 16, "*", edit_primitive))		;
+	this.setColour("#2196f3");
+	this.setOutput(true,['action']);
+
+	this.setTooltip("move the arms");
  	this.setHelpUrl("");
 }};
 
@@ -128,6 +158,21 @@ init: function() {
 	this.setOutput(true,['condition']);
 
 	this.setTooltip("Is robot touched");
+ 	this.setHelpUrl("");
+}};
+
+Blockly.Blocks["sidestep"] = {
+init: function() {
+	this.appendDummyInput()
+		.appendField("Side step")
+		.appendField(new Blockly.FieldTextInput("edit"), "inp_1")
+		.appendField(" options")
+		.appendField(new Blockly.FieldTextInput("edit"), "inp_2")
+		.appendField(new Blockly.FieldImage(configuration_image, 16, 16, "*", edit_primitive))		;
+	this.setColour("#2196f3");
+	this.setOutput(true,['action']);
+
+	this.setTooltip("Make robot walk sideways");
  	this.setHelpUrl("");
 }};
 
