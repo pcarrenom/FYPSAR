@@ -123,6 +123,7 @@ class Robot():
         YanAPI.yan_api_init(robot_ip)
         YanAPI.start_voice_tts("I have successfully connected to Robot Actions.", interrupt=False)
         YanAPI.set_robot_led("button", "purple", "on")
+        YanAPI.set_robot_led("camera", "red", "on")
         YanAPI.start_play_motion(name='reset')
 
     def robot_pause(self):
