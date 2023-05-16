@@ -378,6 +378,34 @@ class Robot():
         
         time.sleep(2)
         return "success"
+    
+    def sidestep(self, value, parameters):
+        try:
+            steps = int(parameters.get('steps', 1))
+        except:
+            steps = 1
+        try:
+            speed_act = int(np.clip(int(parameters['speed']), 1, 100))
+        except:
+            speed_act = 50
+        speed_dict = {0: "very slow", 1: "slow", 2: "normal", 3: "fast", 4: "very fast"}
+        if value not in ['backwards','forward','left','right']:
+            value = "left"
+            
+
+        logger.info("move "+ value + " by " + str(steps)+ " times, with speed " + str(speed_act))
+        if value == "forward" or value == "backwards":
+            self.my_walk(speed_act, value, steps)
+        else:
+            for i in range(steps):
+                speedString = speed_dict.get(np.clip(speed_act//5, 0, 4))
+                YanAPI.start_play_motion(name = 'walk', direction = value, speed = speedString)
+                self.robot_pause()
+    
+        YanAPI.stop_play_motion()
+        
+        time.sleep(2)
+        return "success"
 
     def stretch(self, value, parameters):
         speedlist = ['Slow','Normal','Fast']
