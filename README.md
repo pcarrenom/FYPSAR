@@ -12,7 +12,7 @@ These are the Python scripts that are used to code the Yanshee Robot for the fin
     - The IP Address will be displayed at the bottom of the list.
     ![Step 4](data/images/IP_Address_4.jpg)
     - This can also be done by connecting the robot to a screen through HDMI and then typing "ifconfig" on the Terminal. The IP Address would appear under wlan0.
-    ![Using RaspberryPi](data/Images/IP_Address_Pi.png)
+    ![Using RaspberryPi](data/images/IP_Address_Pi.png)
 2. Insert it into your code.
     - Make sure to import the YanAPI and a string variable to store the IP Address. Use the function YanAPI.yan_api_init() to connect to the robot.
 
@@ -38,7 +38,7 @@ It is recommended to create a virtual environment for development. This will hel
     ```
     and eventually clone the following repository with this command.
     ```console
-    $ git clone https://github.com/jjah0001/FYPSAR
+    $ git clone https://github.com/pcarrenom/FYPSAR
     ```
     Then, navigate into the config folder
     ```console
@@ -105,11 +105,11 @@ It is recommended to create a virtual environment for development. This will hel
 ### Creating a new motion
 In order to create a new motion, make sure to have the Yanshee App installed and the robot connected to your phone
 1. Select PRP from the main page
-![Step 1](data/images/Motion_1.png)
+![Step 1](data/images/Motion_1.PNG)
 2. Select the "+" sign
-![Step 2](data/images/Motion_2.png)
+![Step 2](data/images/Motion_2.PNG)
 3. Select the body part that you wish to create an action with before selecting on "Manual Record"
-![Step 3](data/images/Motion_3.png)
+![Step 3](data/images/Motion_3.PNG)
 4. If you wish to fine tune the action, select the action number and then touch on "Edit" where there are options that includes fine tuning and delay time.
-![Step 4](data/images/Motion_4.png)
+![Step 4](data/images/Motion_4.PNG)
 5. Repeat Steps 2-4 again until you have finalised your motion.
