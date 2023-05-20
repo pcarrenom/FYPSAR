@@ -588,15 +588,16 @@ class Robot():
                 (1, 1): 'bothForward'
             }
         }
+        logger.info("left leg: " + str(left_leg) + " right leg: " + str(right_leg))
         if (left_leg, right_leg) in leg_motion_map.get(value, {}):
             logger.info(value +" raise")
-            logger.info("left leg: " + str(left_leg) + " right leg: " + str(right_leg))
+            
             logger.info("leg motion played: " + str(leg_motion_map[value][(left_leg, right_leg)]) + " for "+ str(time) + " seconds")
             self.leg_motion(leg_motion_map[value][(left_leg, right_leg)],time)
 
         else:
             logger.info("no leg")
-            self.leg_motion('bothForward')
+            self.leg_motion('bothForward',time)
 
         return "success"
 

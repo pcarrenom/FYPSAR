@@ -11,6 +11,8 @@ These are the Python scripts that are used to code the Yanshee Robot for the fin
     ![Step 3](data/images/IP_Address_3.jpg)
     - The IP Address will be displayed at the bottom of the list.
     ![Step 4](data/images/IP_Address_4.jpg)
+    - This can also be done by connecting the robot to a screen through HDMI and then typing "ifconfig" on the Terminal. The IP Address would appear under wlan0.
+    ![Using RaspberryPi](data/Images/IP_Address_Pi.png)
 2. Insert it into your code.
     - Make sure to import the YanAPI and a string variable to store the IP Address. Use the function YanAPI.yan_api_init() to connect to the robot.
 
@@ -30,28 +32,6 @@ In case of an emergency, push the button on the head of the robot. <br />
 ### Python Environment
 It is recommended to create a virtual environment for development. This will help with dependency management. It will help to make the project self-contained and easier to share and recreate. Below are instructions on creating a virtual environment and installing all required dependencies using conda. Another alternative is to use venvs + pip tools.
 
-1. Create a new conda environment for the project
-    ```console
-    $ conda create -n <name of your environment>
-    ```
-2. Install the following dependencies using pip
-    ```console
-    $ conda activate <name of your environment>
-    $ pip install nep transitions rize
-    ```
-3. Additional dependencies to work with the Yanshee robot might be needed, such as python 3.5 or numpy
-    ```console
-    $ pip install python=3.5
-    $ pip install numpy
-    $ pip install os
-    $ pip install sys
-    $ pip install json
-    $ pip install logging
-    $ pip install time
-    $ pip install zmq
-    ```
-
-### Base Code and RIZE Interface
 1. Create a new folder (The name New_Code is used as an example). Direct to it with the command
     ```console
     $ cd ~/New_Code
@@ -59,6 +39,25 @@ It is recommended to create a virtual environment for development. This will hel
     and eventually clone the following repository with this command.
     ```console
     $ git clone https://github.com/jjah0001/FYPSAR
+    ```
+    Then, navigate into the config folder
+    ```console
+    $ cd FYPSAR/config
+    ```
+2. Create a new conda environment for the project
+    ```console
+    $ conda create --name <name of your environment> --file requirements.txt
+    ```
+3. Install the following dependencies using pip
+    ```console
+    $ conda activate <name of your environment>
+    $ pip install nep transitions rize
+    ```
+
+### Base Code and RIZE Interface
+1. Navigate to the FYPSAR folder
+    ```console
+    $ cd ~/New_Code/FYPSAR
     ```
 2. Follow these instructions to install nvm https://github.com/nvm-sh/nvm#install--update-script
 3. Close the terminal used to install nvm and open a new one
@@ -103,3 +102,14 @@ It is recommended to create a virtual environment for development. This will hel
     $ cd SCR
     $ python robot_perception.py
     ```
+### Creating a new motion
+In order to create a new motion, make sure to have the Yanshee App installed and the robot connected to your phone
+1. Select PRP from the main page
+![Step 1](data/images/Motion_1.png)
+2. Select the "+" sign
+![Step 2](data/images/Motion_2.png)
+3. Select the body part that you wish to create an action with before selecting on "Manual Record"
+![Step 3](data/images/Motion_3.png)
+4. If you wish to fine tune the action, select the action number and then touch on "Edit" where there are options that includes fine tuning and delay time.
+![Step 4](data/images/Motion_4.png)
+5. Repeat Steps 2-4 again until you have finalised your motion.
