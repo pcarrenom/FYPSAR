@@ -1,0 +1,9 @@
+{
+    "primitive": "Side step",
+    "type": "output",
+    "description": "Make robot walk sideways",
+    "input": "dropdown",
+    "input_options":["left", "right"],
+    "options":{"steps":"number", "speed":"percentage"}
+}
+

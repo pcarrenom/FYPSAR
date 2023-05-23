@@ -1,0 +1,11 @@
+{
+    "primitive": "Move elbow",
+    "type": "output",
+    "description": "move the arms",
+    "input": "dropdown",
+    "input_options":[
+        "flexion",
+        "extension"
+    ],
+    "options":{"angle": "degrees","LeftArm": "bool", "RightArm": "bool"}
+}

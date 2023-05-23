@@ -1,0 +1,9 @@
+{
+    "primitive": "Walk",
+    "type": "output",
+    "description": "Make robot walk",
+    "input": "dropdown",
+    "input_options":["forward", "backwards"],
+    "options":{"steps":"number", "speed":"percentage"}
+}
+

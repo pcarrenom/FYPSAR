@@ -1,0 +1,176 @@
+{
+    "arm":{
+        "description":"move the arms",
+        "input":"dropdown",
+        "input_options":[
+            "side",
+            "forward",
+            "up",
+            "crane"
+        ],
+        "options":{
+            "LeftArm":"bool",
+            "RightArm":"bool"
+        },
+        "primitive":"Move arm",
+        "type":"output"
+    },
+    "elbow":{
+        "description":"move the arms",
+        "input":"dropdown",
+        "input_options":[
+            "flexion",
+            "extension"
+        ],
+        "options":{
+            "LeftArm":"bool",
+            "RightArm":"bool",
+            "angle":"degrees"
+        },
+        "primitive":"Move elbow",
+        "type":"output"
+    },
+    "leg":{
+        "description":"Raise Leg",
+        "input":"dropdown",
+        "input_options":[
+            "forward",
+            "backwards"
+        ],
+        "options":{
+            "LeftLeg":"bool",
+            "RightLeg":"bool",
+            "hold_time":"seconds"
+        },
+        "primitive":"Raise leg",
+        "type":"output"
+    },
+    "mode":{
+        "description":"Wake or rest the robot",
+        "input":"dropdown",
+        "input_options":[
+            "wake_up",
+            "rest"
+        ],
+        "primitive":"Mode (Wake up/Rest)",
+        "type":"output"
+    },
+    "reset":{
+        "description":"Reset Robot",
+        "primitive":"Reset",
+        "type":"output"
+    },
+    "say":{
+        "description":"Say something with the robot",
+        "input":"string",
+        "options":{
+            "volume":"percentage"
+        },
+        "primitive":"Say",
+        "type":"output"
+    },
+    "shoulder":{
+        "description":"move the shoulders",
+        "input":"dropdown",
+        "input_options":[
+            "side",
+            "forward",
+            "backwards"
+        ],
+        "options":{
+            "LeftArm":"bool",
+            "RightArm":"bool",
+            "angle":"degrees"
+        },
+        "primitive":"Move shoulder",
+        "type":"output"
+    },
+    "sidestep":{
+        "description":"Make robot walk sideways",
+        "input":"dropdown",
+        "input_options":[
+            "left",
+            "right"
+        ],
+        "options":{
+            "speed":"percentage",
+            "steps":"number"
+        },
+        "primitive":"Side step",
+        "type":"output"
+    },
+    "stretch":{
+        "description":"Perform an stretch",
+        "input":"dropdown",
+        "input_options":[
+            "HeadStretch",
+            "HeadRoll",
+            "EyeRest",
+            "WristStretch",
+            "ElbowStretch",
+            "UpperAndLowerStretch",
+            "ShoulderRoll",
+            "ForwardStretch",
+            "BackArch",
+            "Pectoral",
+            "SideBend",
+            "ChinTuck",
+            "FootRotation",
+            "HeelRaise"
+        ],
+        "options":{
+            "repetition":"number",
+            "speechGuide":"bool",
+            "speed":"percentage",
+            "volume":"percentage"
+        },
+        "primitive":"Stretch",
+        "type":"output"
+    },
+    "touched":{
+        "description":"Is robot touched",
+        "input":"dropdown",
+        "input_options":[
+            "head",
+            "right_hand",
+            "left_hand"
+        ],
+        "primitive":"Touched",
+        "type":"input"
+    },
+    "turn":{
+        "description":"Turn robot body/head",
+        "input":"dropdown",
+        "input_options":[
+            "left",
+            "right"
+        ],
+        "options":{
+            "body":"bool",
+            "degrees":"degrees",
+            "head":"bool"
+        },
+        "primitive":"Turn",
+        "type":"output"
+    },
+    "wait":{
+        "description":"Wait some seconds",
+        "input":"seconds",
+        "primitive":"Wait (seconds)",
+        "type":"output"
+    },
+    "walk":{
+        "description":"Make robot walk",
+        "input":"dropdown",
+        "input_options":[
+            "forward",
+            "backwards"
+        ],
+        "options":{
+            "speed":"percentage",
+            "steps":"number"
+        },
+        "primitive":"Walk",
+        "type":"output"
+    }
+}

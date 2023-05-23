@@ -1,0 +1,11 @@
+{
+    "primitive": "Raise leg",
+    "type": "output",
+    "description": "Raise Leg",
+    "input": "dropdown",
+    "input_options":[
+        "forward",
+        "backwards"
+    ],
+    "options":{"LeftLeg": "bool", "RightLeg": "bool", "hold_time": "seconds"}
+}

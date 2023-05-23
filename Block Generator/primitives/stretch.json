@@ -1,0 +1,23 @@
+{
+    "primitive": "Stretch",
+    "type": "output",
+    "description": "Perform an stretch",
+    "input": "dropdown",
+    "input_options":[
+        "HeadStretch",
+        "HeadRoll",
+        "EyeRest",
+        "WristStretch",
+        "ElbowStretch",
+        "UpperAndLowerStretch",
+        "ShoulderRoll",
+        "ForwardStretch",
+        "BackArch",
+        "Pectoral",
+        "SideBend",
+        "ChinTuck",
+        "FootRotation",
+        "HeelRaise"
+    ],
+    "options":{"speed":"percentage","repetition":"number","speechGuide":"bool","volume":"percentage"}
+}

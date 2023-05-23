@@ -1,0 +1,7 @@
+{
+    "primitive": "Say",
+    "type": "output",
+    "description": "Say something with the robot",
+    "input": "string",
+    "options":{"volume":"percentage"}
+}

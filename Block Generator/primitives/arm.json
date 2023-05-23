@@ -1,0 +1,13 @@
+{
+    "primitive": "Move arm",
+    "type": "output",
+    "description": "move the arms",
+    "input": "dropdown",
+    "input_options":[
+        "side",
+        "forward",
+        "up",
+        "crane"
+    ],
+    "options":{"LeftArm": "bool", "RightArm": "bool"}
+}

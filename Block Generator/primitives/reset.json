@@ -1,0 +1,6 @@
+{
+    "primitive": "Reset",
+    "type": "output",
+    "description": "Reset Robot"
+}
+

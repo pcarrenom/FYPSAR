@@ -1,0 +1,12 @@
+{
+    "primitive": "Move shoulder",
+    "type": "output",
+    "description": "move the shoulders",
+    "input": "dropdown",
+    "input_options":[
+        "side",
+        "forward",
+        "backwards"
+    ],
+    "options":{"angle": "degrees","LeftArm": "bool", "RightArm": "bool"}
+}
