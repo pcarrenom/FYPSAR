@@ -6,3 +6,6 @@ node_modules
 dist
 parallel_motion_test.py
 test.py
+*.log
+*.avi
+*.csv
