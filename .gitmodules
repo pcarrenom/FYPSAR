@@ -1,0 +1,3 @@
+[submodule "Posture-Detection"]
+	path = Posture-Detection
+	url = https://github.com/MonashRobotics/Posture-Detection.git
