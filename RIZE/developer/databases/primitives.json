@@ -99,6 +99,48 @@
         "primitive":"Side step",
         "type":"output"
     },
+    "human_detected":{
+        "description":"Is human detected with the camera?",
+        "input":"dropdown",
+        "input_options":[
+            "yes",
+            "no"
+        ],
+        "primitive":"Human detected (camera)",
+        "type":"input"
+    },
+    "posture_change":{
+        "description":"Has the body in frame changed posture?",
+        "input":"dropdown",
+        "input_options":[
+            "yes",
+            "no"
+        ],
+        "primitive":"Posture change detected (camera)",
+        "type":"input"
+    },
+    "posture_detected":{
+        "description":"Does the body in frame have bad posture?",
+        "input":"dropdown",
+        "input_options":[
+            "slouching",
+            "forward_head",
+            "leaning_forward",
+            "twisted"
+        ],
+        "primitive":"Bad posture detected (camera)",
+        "type":"input"
+    },
+    "prolonged_sitting":{
+        "description":"Has the body in frame sat for an extended period of time?",
+        "input":"dropdown",
+        "input_options":[
+            "yes",
+            "no"
+        ],
+        "primitive":"Prolonged sitting detected (camera)",
+        "type":"input"
+    },
     "stretch":{
         "description":"Perform an stretch",
         "input":"dropdown",

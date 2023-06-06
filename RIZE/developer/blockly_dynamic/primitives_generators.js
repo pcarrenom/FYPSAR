@@ -92,6 +92,30 @@ var code  = '{"primitive":"sidestep"'+","+ '"input":' + '"' + text + '"'+","+'"o
 return [code, Blockly.Python.ORDER_NONE];
 };
 
+Blockly.Python['human_detected'] = function(block) {
+var text = block.getFieldValue('inp_1');
+var code  = '{"primitive":"human_detected"'+","+ '"input":' + '"' + text + '"'+","+'"options":"none"}';
+return [code, Blockly.Python.ORDER_NONE];
+};
+
+Blockly.Python['posture_change'] = function(block) {
+var text = block.getFieldValue('inp_1');
+var code  = '{"primitive":"posture_change"'+","+ '"input":' + '"' + text + '"'+","+'"options":"none"}';
+return [code, Blockly.Python.ORDER_NONE];
+};
+
+Blockly.Python['posture_detected'] = function(block) {
+var text = block.getFieldValue('inp_1');
+var code  = '{"primitive":"posture_detected"'+","+ '"input":' + '"' + text + '"'+","+'"options":"none"}';
+return [code, Blockly.Python.ORDER_NONE];
+};
+
+Blockly.Python['prolonged_sitting'] = function(block) {
+var text = block.getFieldValue('inp_1');
+var code  = '{"primitive":"prolonged_sitting"'+","+ '"input":' + '"' + text + '"'+","+'"options":"none"}';
+return [code, Blockly.Python.ORDER_NONE];
+};
+
 Blockly.Python['reset'] = function(block) {
 var text = block.getFieldValue('inp_1');
 var code  = '{"primitive":"reset"'+","+ '"input":' + '"' + text + '"'+","+'"options":"none"}';

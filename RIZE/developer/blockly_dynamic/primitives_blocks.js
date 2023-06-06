@@ -176,6 +176,58 @@ init: function() {
  	this.setHelpUrl("");
 }};
 
+Blockly.Blocks["human_detected"] = {
+init: function() {
+	this.appendDummyInput()
+		.appendField("Human detected (camera)")
+		.appendField(new Blockly.FieldTextInput("edit"), "inp_1")
+		.appendField(new Blockly.FieldImage(configuration_image, 16, 16, "*", edit_primitive))		;
+	this.setColour("#009688");
+	this.setOutput(true,['condition']);
+
+	this.setTooltip("Is human detected with the camera?");
+		this.setHelpUrl("");
+}};
+
+Blockly.Blocks["posture_change"] = {
+init: function() {
+	this.appendDummyInput()
+		.appendField("Posture change detected (camera)")
+		.appendField(new Blockly.FieldTextInput("edit"), "inp_1")
+		.appendField(new Blockly.FieldImage(configuration_image, 16, 16, "*", edit_primitive))		;
+	this.setColour("#009688");
+	this.setOutput(true,['condition']);
+
+	this.setTooltip("Has the body in frame changed posture?");
+		this.setHelpUrl("");
+}};
+
+Blockly.Blocks["posture_detected"] = {
+init: function() {
+	this.appendDummyInput()
+		.appendField("Bad posture detected (camera)")
+		.appendField(new Blockly.FieldTextInput("edit"), "inp_1")
+		.appendField(new Blockly.FieldImage(configuration_image, 16, 16, "*", edit_primitive))		;
+	this.setColour("#009688");
+	this.setOutput(true,['condition']);
+
+	this.setTooltip("Does the body in frame have bad posture?");
+		this.setHelpUrl("");
+}};
+
+Blockly.Blocks["prolonged_sitting"] = {
+init: function() {
+	this.appendDummyInput()
+		.appendField("Prolonged sitting detected (camera)")
+		.appendField(new Blockly.FieldTextInput("edit"), "inp_1")
+		.appendField(new Blockly.FieldImage(configuration_image, 16, 16, "*", edit_primitive))		;
+	this.setColour("#009688");
+	this.setOutput(true,['condition']);
+
+	this.setTooltip("Has the body in frame sat for an extended period of time?");
+		this.setHelpUrl("");
+}};
+
 Blockly.Blocks["reset"] = {
 init: function() {
 	this.appendDummyInput()

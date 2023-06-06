@@ -22,6 +22,10 @@ toolbox +='    <block type="elbow"></block>';
 toolbox +='    <block type="turn"></block>';
 toolbox +='    <block type="mode"></block>';
 toolbox +='    <block type="sidestep"></block>';
+toolbox +='    <block type="human_detected"></block>';
+toolbox +='    <block type="posture_change"></block>';
+toolbox +='    <block type="posture_detected"></block>';
+toolbox +='    <block type="prolonged_sitting"></block>';
 toolbox +='    <block type="reset"></block>';
 toolbox += '  </category>';
 
