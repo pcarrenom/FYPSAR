@@ -84,14 +84,6 @@ var code  = '{"primitive":"touched"'+","+ '"input":' + '"' + text + '"'+","+'"op
 return [code, Blockly.Python.ORDER_NONE];
 };
 
-Blockly.Python['sidestep'] = function(block) {
-var text = block.getFieldValue('inp_1');
-var options_dic = block.getFieldValue('inp_2');
-options_dic = rizeBlockly.formatOptions(options_dic) 
-var code  = '{"primitive":"sidestep"'+","+ '"input":' + '"' + text + '"'+","+'"options":' + options_dic + '}';
-return [code, Blockly.Python.ORDER_NONE];
-};
-
 Blockly.Python['human_detected'] = function(block) {
 var text = block.getFieldValue('inp_1');
 var code  = '{"primitive":"human_detected"'+","+ '"input":' + '"' + text + '"'+","+'"options":"none"}';
@@ -113,6 +105,14 @@ return [code, Blockly.Python.ORDER_NONE];
 Blockly.Python['prolonged_sitting'] = function(block) {
 var text = block.getFieldValue('inp_1');
 var code  = '{"primitive":"prolonged_sitting"'+","+ '"input":' + '"' + text + '"'+","+'"options":"none"}';
+return [code, Blockly.Python.ORDER_NONE];
+};
+
+Blockly.Python['sidestep'] = function(block) {
+var text = block.getFieldValue('inp_1');
+var options_dic = block.getFieldValue('inp_2');
+options_dic = rizeBlockly.formatOptions(options_dic) 
+var code  = '{"primitive":"sidestep"'+","+ '"input":' + '"' + text + '"'+","+'"options":' + options_dic + '}';
 return [code, Blockly.Python.ORDER_NONE];
 };
 

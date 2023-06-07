@@ -161,21 +161,6 @@ init: function() {
  	this.setHelpUrl("");
 }};
 
-Blockly.Blocks["sidestep"] = {
-init: function() {
-	this.appendDummyInput()
-		.appendField("Side step")
-		.appendField(new Blockly.FieldTextInput("edit"), "inp_1")
-		.appendField(" options")
-		.appendField(new Blockly.FieldTextInput("edit"), "inp_2")
-		.appendField(new Blockly.FieldImage(configuration_image, 16, 16, "*", edit_primitive))		;
-	this.setColour("#2196f3");
-	this.setOutput(true,['action']);
-
-	this.setTooltip("Make robot walk sideways");
- 	this.setHelpUrl("");
-}};
-
 Blockly.Blocks["human_detected"] = {
 init: function() {
 	this.appendDummyInput()
@@ -226,6 +211,21 @@ init: function() {
 
 	this.setTooltip("Has the body in frame sat for an extended period of time?");
 		this.setHelpUrl("");
+}};
+
+Blockly.Blocks["sidestep"] = {
+init: function() {
+	this.appendDummyInput()
+		.appendField("Side step")
+		.appendField(new Blockly.FieldTextInput("edit"), "inp_1")
+		.appendField(" options")
+		.appendField(new Blockly.FieldTextInput("edit"), "inp_2")
+		.appendField(new Blockly.FieldImage(configuration_image, 16, 16, "*", edit_primitive))		;
+	this.setColour("#2196f3");
+	this.setOutput(true,['action']);
+
+	this.setTooltip("Make robot walk sideways");
+ 	this.setHelpUrl("");
 }};
 
 Blockly.Blocks["reset"] = {

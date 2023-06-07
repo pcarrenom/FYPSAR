@@ -99,6 +99,45 @@
         "primitive":"Side step",
         "type":"output"
     },
+    "stretch":{
+        "description":"Perform an stretch",
+        "input":"dropdown",
+        "input_options":[
+            "HeadStretch",
+            "HeadRoll",
+            "EyeRest",
+            "WristStretch",
+            "ElbowStretch",
+            "UpperAndLowerStretch",
+            "ShoulderRoll",
+            "ForwardStretch",
+            "BackArch",
+            "Pectoral",
+            "SideBend",
+            "ChinTuck",
+            "FootRotation",
+            "HeelRaise"
+        ],
+        "options":{
+            "repetition":"number",
+            "speechGuide":"bool",
+            "speed":"percentage",
+            "volume":"percentage"
+        },
+        "primitive":"Stretch",
+        "type":"output"
+    },
+    "touched":{
+        "description":"Is robot touched",
+        "input":"dropdown",
+        "input_options":[
+            "head",
+            "right_hand",
+            "left_hand"
+        ],
+        "primitive":"Touched",
+        "type":"input"
+    },
     "human_detected":{
         "description":"Is human detected with the camera?",
         "input":"dropdown",
@@ -139,45 +178,6 @@
             "no"
         ],
         "primitive":"Prolonged sitting detected (camera)",
-        "type":"input"
-    },
-    "stretch":{
-        "description":"Perform an stretch",
-        "input":"dropdown",
-        "input_options":[
-            "HeadStretch",
-            "HeadRoll",
-            "EyeRest",
-            "WristStretch",
-            "ElbowStretch",
-            "UpperAndLowerStretch",
-            "ShoulderRoll",
-            "ForwardStretch",
-            "BackArch",
-            "Pectoral",
-            "SideBend",
-            "ChinTuck",
-            "FootRotation",
-            "HeelRaise"
-        ],
-        "options":{
-            "repetition":"number",
-            "speechGuide":"bool",
-            "speed":"percentage",
-            "volume":"percentage"
-        },
-        "primitive":"Stretch",
-        "type":"output"
-    },
-    "touched":{
-        "description":"Is robot touched",
-        "input":"dropdown",
-        "input_options":[
-            "head",
-            "right_hand",
-            "left_hand"
-        ],
-        "primitive":"Touched",
         "type":"input"
     },
     "turn":{
