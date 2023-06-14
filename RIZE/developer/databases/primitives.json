@@ -163,9 +163,10 @@
         "input":"dropdown",
         "input_options":[
             "slouching",
+            "neck_extension",
             "forward_head",
             "leaning_forward",
-            "twisted"
+            "twisting"
         ],
         "primitive":"Bad posture detected (camera)",
         "type":"input"

@@ -1,11 +1,13 @@
 var toolbox = '<xml id="toolbox" style="display: none">';
 
 toolbox += '<category name="Set event triggers" colour="#009688">'
-toolbox +='    <block type="touched"></block>';
-toolbox +='    <block type="human_detected"></block>';
-toolbox +='    <block type="posture_change"></block>';
-toolbox +='    <block type="posture_detected"></block>';
-toolbox +='    <block type="prolonged_sitting"></block>';
+toolbox += '<block type="lists_and"></block>';
+toolbox += '<block type="lists_or"></block>';
+toolbox += '    <block type="touched"></block>';
+toolbox += '    <block type="human_detected"></block>';
+toolbox += '    <block type="posture_change"></block>';
+toolbox += '    <block type="posture_detected"></block>';
+toolbox += '    <block type="prolonged_sitting"></block>';
 toolbox += '  </category>';
 
 toolbox +='<sep></sep>';
@@ -33,8 +35,12 @@ toolbox +='<sep></sep>';
 toolbox += '<category name="Modules"  colour="#2E7D32">'
 toolbox +='<block type="do_module"></block>';
 toolbox +='</category>';
+
+toolbox += '<sep></sep>';
+toolbox += '<category name="Select behaviors"  colour="#424242">'
+toolbox += '<block type="selector"></block>';
+toolbox += '<block type="check_perception"></block>';
+toolbox += '</category>';
+
 toolbox +='<sep></sep>';
-
-
-
 toolbox += '</xml>';
