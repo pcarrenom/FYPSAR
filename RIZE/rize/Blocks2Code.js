@@ -143,7 +143,10 @@ var rizeBlocks = {
   reaction: function (text_name_reaction, conditions, statements_behavior_code, text_utility) {
     text_name_reaction = module_name
     console.log(conditions)
-    console.log(JSON.parse(conditions))
+    if (conditions != null) {
+      console.log(JSON.parse(conditions))
+    }
+
     var start_condition = this.build_conditions(conditions, false);
     let lista = rizeBlocks.codeToList(statements_behavior_code);
     let bt = bt_blocks.sequence(lista)
