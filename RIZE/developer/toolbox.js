@@ -7,6 +7,7 @@ toolbox += '    <block type="touched"></block>';
 toolbox += '    <block type="human_detected"></block>';
 toolbox += '    <block type="posture_change"></block>';
 toolbox += '    <block type="posture_detected"></block>';
+toolbox += '    <block type="movement_detected"></block>';
 toolbox += '    <block type="prolonged_sitting"></block>';
 toolbox += '  </category>';
 

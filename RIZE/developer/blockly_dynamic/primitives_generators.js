@@ -102,6 +102,12 @@ var code  = '{"primitive":"posture_detected"'+","+ '"input":' + '"' + text + '"'
 return [code, Blockly.Python.ORDER_NONE];
 };
 
+Blockly.Python['movement_detected'] = function(block) {
+var text = block.getFieldValue('inp_1');
+var code  = '{"primitive":"movement_detected"'+","+ '"input":' + '"' + text + '"'+","+'"options":"none"}';
+return [code, Blockly.Python.ORDER_NONE];
+};
+
 Blockly.Python['prolonged_sitting'] = function(block) {
 var text = block.getFieldValue('inp_1');
 var code  = '{"primitive":"prolonged_sitting"'+","+ '"input":' + '"' + text + '"'+","+'"options":"none"}';

@@ -187,6 +187,19 @@ init: function() {
 		this.setHelpUrl("");
 }};
 
+Blockly.Blocks["movement_detected"] = {
+init: function() {
+	this.appendDummyInput()
+		.appendField("Movement detected (camera)")
+		.appendField(new Blockly.FieldTextInput("edit"), "inp_1")
+		.appendField(new Blockly.FieldImage(configuration_image, 16, 16, "*", edit_primitive))		;
+	this.setColour("#009688");
+	this.setOutput(true,['condition']);
+
+	this.setTooltip("Has the body in frame moved?");
+		this.setHelpUrl("");
+}};
+
 Blockly.Blocks["posture_detected"] = {
 init: function() {
 	this.appendDummyInput()

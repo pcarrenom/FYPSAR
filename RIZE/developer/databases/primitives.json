@@ -152,8 +152,8 @@
         "description":"Has the body in frame changed posture?",
         "input":"dropdown",
         "input_options":[
-            "yes",
-            "no"
+            "normal_to_risky",
+            "risky_to_normal"
         ],
         "primitive":"Posture change detected (camera)",
         "type":"input"
@@ -169,6 +169,16 @@
             "twisting"
         ],
         "primitive":"Bad posture detected (camera)",
+        "type":"input"
+    },
+    "movement_detected":{
+        "description":"Has the body in frame moved?",
+        "input":"dropdown",
+        "input_options":[
+            "in_to_out",
+            "out_to_in"
+        ],
+        "primitive":"Movement detected (camera)",
         "type":"input"
     },
     "prolonged_sitting":{

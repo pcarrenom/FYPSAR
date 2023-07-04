@@ -6,6 +6,7 @@ node_modules
 dist
 parallel_motion_test.py
 test.py
+my_robot_action_edit.py
 *.log
 *.avi
 *.csv

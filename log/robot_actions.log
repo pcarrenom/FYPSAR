@@ -4598,3 +4598,1002 @@
 2023-05-18 16:15:01,065 - my_robot - INFO - volume: 100
 2023-05-18 16:15:06,974 - transitions.core - INFO - Finished processing state running exit callbacks.
 2023-05-18 16:15:06,975 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 15:59:12,973 - root - INFO - Robot ready
+2023-06-07 15:59:28,301 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 15:59:28,301 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 15:59:28,317 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 15:59:28,317 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 15:59:28,318 - my_robot - INFO - forward raise  with left arm False and right arm False
+2023-06-07 15:59:28,318 - my_robot - INFO - angle value: 0
+2023-06-07 15:59:37,172 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 15:59:37,173 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:03:49,724 - root - INFO - Robot ready
+2023-06-07 16:04:50,647 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 16:04:50,648 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 16:04:50,662 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 16:04:50,662 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:04:50,663 - my_robot - INFO - forward raise  with left arm False and right arm False
+2023-06-07 16:04:50,665 - my_robot - INFO - angle value: 0
+2023-06-07 16:06:17,827 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 16:06:17,828 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:06:54,347 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 16:06:54,347 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:25:14,611 - root - INFO - Robot ready
+2023-06-07 16:25:23,375 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 16:25:23,375 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 16:25:23,389 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 16:25:23,390 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:25:23,391 - my_robot - INFO - forward raise  with left arm False and right arm False
+2023-06-07 16:25:23,392 - my_robot - INFO - angle value: 0
+2023-06-07 16:26:06,608 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 16:26:06,609 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:26:11,757 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 16:26:11,758 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:26:21,585 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 16:26:21,586 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:26:30,958 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 16:26:30,958 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:27:39,477 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 16:27:39,477 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:28:02,170 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 16:28:02,170 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:28:04,645 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 16:28:04,645 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:30:17,021 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 16:30:17,022 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:41:21,038 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 16:41:21,038 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:41:22,539 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 16:41:22,539 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:51:14,230 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 16:51:14,230 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:54:17,436 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 16:54:17,437 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:54:18,993 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 16:54:18,994 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:54:42,956 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 16:54:42,957 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:54:44,261 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 16:54:44,262 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:54:44,450 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 16:54:44,451 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:55:04,398 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 16:55:04,399 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:55:15,379 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 16:55:15,380 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:55:16,191 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 16:55:16,192 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:55:16,439 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 16:55:16,440 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:55:22,179 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 16:55:22,180 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:55:31,519 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 16:55:31,520 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:55:32,390 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 16:55:32,390 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:55:32,513 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 16:55:32,514 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:55:32,701 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 16:55:32,702 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:55:32,886 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 16:55:32,888 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:56:05,373 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 16:56:05,373 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:56:24,100 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 16:56:24,100 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 16:57:00,122 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 16:57:00,122 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:01:20,067 - root - INFO - Robot ready
+2023-06-07 17:01:25,732 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:01:25,732 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:01:25,747 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:01:25,747 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:01:25,748 - my_robot - INFO - side raise
+2023-06-07 17:01:25,748 - my_robot - INFO - left arm: True right arm: False
+2023-06-07 17:01:25,748 - my_robot - INFO - leg motion played: leftSide
+2023-06-07 17:02:55,416 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:02:55,417 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:03:06,698 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:03:06,698 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:03:17,910 - root - ERROR - There is a connection error
+2023-06-07 17:03:23,258 - root - INFO - Robot ready
+2023-06-07 17:03:26,398 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:03:26,398 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:03:26,413 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:03:26,413 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:03:26,414 - my_robot - INFO - side raise
+2023-06-07 17:03:26,414 - my_robot - INFO - left arm: False right arm: True
+2023-06-07 17:03:26,414 - my_robot - INFO - leg motion played: rightSide
+2023-06-07 17:03:28,697 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:03:28,697 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:03:34,377 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:03:34,378 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:03:34,392 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:03:34,392 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:03:34,393 - my_robot - INFO - side raise
+2023-06-07 17:03:34,393 - my_robot - INFO - left arm: True right arm: False
+2023-06-07 17:03:34,393 - my_robot - INFO - leg motion played: leftSide
+2023-06-07 17:03:36,702 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:03:36,703 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:03:50,039 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:03:50,039 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:03:50,053 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:03:50,054 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:03:50,054 - my_robot - INFO - side raise
+2023-06-07 17:03:50,054 - my_robot - INFO - left arm: True right arm: False
+2023-06-07 17:03:50,055 - my_robot - INFO - leg motion played: leftSide
+2023-06-07 17:03:52,604 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:03:52,605 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:04:11,836 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:04:11,836 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:04:11,852 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:04:11,852 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:04:11,853 - my_robot - INFO - side raise
+2023-06-07 17:04:11,853 - my_robot - INFO - left arm: True right arm: False
+2023-06-07 17:04:11,853 - my_robot - INFO - leg motion played: leftSide
+2023-06-07 17:04:14,222 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:04:14,222 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:04:21,254 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:04:21,255 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:04:21,269 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:04:21,269 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:04:21,270 - my_robot - INFO - side raise
+2023-06-07 17:04:21,270 - my_robot - INFO - left arm: True right arm: False
+2023-06-07 17:04:21,270 - my_robot - INFO - leg motion played: leftSide
+2023-06-07 17:04:23,531 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:04:23,531 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:04:29,735 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:04:29,735 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:04:29,750 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:04:29,751 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:04:29,751 - my_robot - INFO - side raise
+2023-06-07 17:04:29,751 - my_robot - INFO - left arm: True right arm: False
+2023-06-07 17:04:29,752 - my_robot - INFO - leg motion played: leftSide
+2023-06-07 17:04:32,045 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:04:32,045 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:04:53,597 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:04:53,597 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:04:53,612 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:04:53,612 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:04:53,613 - my_robot - INFO - side raise
+2023-06-07 17:04:53,613 - my_robot - INFO - left arm: False right arm: True
+2023-06-07 17:04:53,613 - my_robot - INFO - leg motion played: rightSide
+2023-06-07 17:04:55,932 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:04:55,932 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:05:20,762 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:05:20,763 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:05:20,778 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:05:20,778 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:05:20,779 - my_robot - INFO - side raise
+2023-06-07 17:05:20,779 - my_robot - INFO - left arm: False right arm: True
+2023-06-07 17:05:20,779 - my_robot - INFO - leg motion played: rightSide
+2023-06-07 17:05:23,039 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:05:23,040 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:05:31,251 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:05:31,251 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:05:31,266 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:05:31,266 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:05:31,267 - my_robot - INFO - forward raise
+2023-06-07 17:05:31,267 - my_robot - INFO - left arm: False right arm: True
+2023-06-07 17:05:31,267 - my_robot - INFO - leg motion played: rightForward
+2023-06-07 17:05:33,631 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:05:33,631 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:05:48,318 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:05:48,319 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:05:48,333 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:05:48,334 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:05:48,337 - my_robot - INFO - forward raise
+2023-06-07 17:05:48,338 - my_robot - INFO - left arm: True right arm: False
+2023-06-07 17:05:48,338 - my_robot - INFO - leg motion played: leftForward
+2023-06-07 17:05:50,646 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:05:50,646 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:06:09,109 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:06:09,110 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:06:09,124 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:06:09,124 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:06:09,125 - my_robot - INFO - forward raise
+2023-06-07 17:06:09,125 - my_robot - INFO - left arm: True right arm: False
+2023-06-07 17:06:09,125 - my_robot - INFO - leg motion played: leftForward
+2023-06-07 17:06:11,415 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:06:11,416 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:06:20,585 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:06:20,585 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:06:20,600 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:06:20,600 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:06:20,601 - my_robot - INFO - forward raise
+2023-06-07 17:06:20,601 - my_robot - INFO - left arm: True right arm: False
+2023-06-07 17:06:20,601 - my_robot - INFO - leg motion played: leftForward
+2023-06-07 17:06:22,902 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:06:22,903 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:06:42,803 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:06:42,804 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:06:42,818 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:06:42,819 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:06:42,819 - my_robot - INFO - forward raise
+2023-06-07 17:06:42,819 - my_robot - INFO - left arm: False right arm: True
+2023-06-07 17:06:42,819 - my_robot - INFO - leg motion played: rightForward
+2023-06-07 17:06:45,143 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:06:45,144 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:07:03,819 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:07:03,820 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:07:03,835 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:07:03,835 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:07:03,836 - my_robot - INFO - forward raise
+2023-06-07 17:07:03,836 - my_robot - INFO - left arm: False right arm: True
+2023-06-07 17:07:03,836 - my_robot - INFO - leg motion played: rightForward
+2023-06-07 17:07:06,159 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:07:06,159 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:07:57,143 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:07:57,143 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:07:57,158 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:07:57,159 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:07:57,159 - my_robot - INFO - forward raise
+2023-06-07 17:07:57,160 - my_robot - INFO - left arm: True right arm: False
+2023-06-07 17:07:57,160 - my_robot - INFO - leg motion played: leftForward
+2023-06-07 17:07:59,419 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:07:59,419 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:08:09,237 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:08:09,237 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:08:09,251 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:08:09,252 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:08:09,253 - my_robot - INFO - forward raise
+2023-06-07 17:08:09,253 - my_robot - INFO - left arm: True right arm: False
+2023-06-07 17:08:09,254 - my_robot - INFO - leg motion played: leftForward
+2023-06-07 17:08:11,569 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:08:11,570 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:08:13,785 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:08:13,785 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:08:13,799 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:08:13,799 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:08:13,800 - my_robot - INFO - forward raise
+2023-06-07 17:08:13,800 - my_robot - INFO - left arm: False right arm: True
+2023-06-07 17:08:13,800 - my_robot - INFO - leg motion played: rightForward
+2023-06-07 17:08:16,108 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:08:16,108 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:09:18,947 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:09:18,948 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:09:18,963 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:09:18,964 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:09:18,965 - my_robot - INFO - Robot resets
+2023-06-07 17:09:19,564 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:09:19,565 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:10:00,226 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:10:00,226 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:10:00,241 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:10:00,241 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:10:00,242 - my_robot - INFO - forward raise
+2023-06-07 17:10:00,242 - my_robot - INFO - left arm: True right arm: False
+2023-06-07 17:10:00,243 - my_robot - INFO - leg motion played: leftForward
+2023-06-07 17:10:02,715 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:10:02,716 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:15:14,306 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:15:14,306 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:15:14,321 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:15:14,321 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:15:14,322 - my_robot - INFO - forward raise
+2023-06-07 17:15:14,322 - my_robot - INFO - left arm: True right arm: False
+2023-06-07 17:15:14,322 - my_robot - INFO - leg motion played: leftForward
+2023-06-07 17:15:16,741 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:15:16,741 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:15:25,232 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:15:25,232 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:15:25,246 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:15:25,247 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:15:25,248 - my_robot - INFO - forward raise
+2023-06-07 17:15:25,248 - my_robot - INFO - left arm: True right arm: False
+2023-06-07 17:15:25,249 - my_robot - INFO - leg motion played: leftForward
+2023-06-07 17:15:27,481 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:15:27,481 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:15:40,070 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:15:40,071 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:15:40,086 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:15:40,086 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:15:40,087 - my_robot - INFO - forward raise
+2023-06-07 17:15:40,087 - my_robot - INFO - left arm: False right arm: True
+2023-06-07 17:15:40,087 - my_robot - INFO - leg motion played: rightForward
+2023-06-07 17:15:42,295 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:15:42,296 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:16:05,787 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:16:05,787 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:16:05,801 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:16:05,802 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:16:05,803 - my_robot - INFO - forward raise
+2023-06-07 17:16:05,804 - my_robot - INFO - left arm: False right arm: True
+2023-06-07 17:16:05,804 - my_robot - INFO - leg motion played: rightForward
+2023-06-07 17:16:08,049 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:16:08,049 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:16:12,356 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:16:12,356 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:16:12,372 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:16:12,372 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:16:12,372 - my_robot - INFO - forward raise
+2023-06-07 17:16:12,373 - my_robot - INFO - left arm: False right arm: True
+2023-06-07 17:16:12,373 - my_robot - INFO - leg motion played: rightForward
+2023-06-07 17:16:14,574 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:16:14,574 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:16:46,361 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:16:46,362 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:16:46,378 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:16:46,378 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:16:46,378 - my_robot - INFO - forward raise
+2023-06-07 17:16:46,378 - my_robot - INFO - left arm: False right arm: True
+2023-06-07 17:16:46,378 - my_robot - INFO - leg motion played: rightForward
+2023-06-07 17:16:48,890 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:16:48,891 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:17:14,773 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:17:14,773 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:17:14,789 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:17:14,789 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:17:14,789 - my_robot - INFO - forward raise
+2023-06-07 17:17:14,790 - my_robot - INFO - left arm: False right arm: True
+2023-06-07 17:17:14,790 - my_robot - INFO - leg motion played: rightForward
+2023-06-07 17:17:16,990 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:17:16,991 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:17:37,095 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:17:37,095 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:17:37,109 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:17:37,109 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:17:37,110 - my_robot - INFO - forward raise
+2023-06-07 17:17:37,110 - my_robot - INFO - left arm: False right arm: True
+2023-06-07 17:17:37,110 - my_robot - INFO - leg motion played: rightForward
+2023-06-07 17:17:39,310 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:17:39,311 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:18:06,779 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:18:06,779 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:18:06,793 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:18:06,793 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:18:06,794 - my_robot - INFO - forward raise
+2023-06-07 17:18:06,794 - my_robot - INFO - left arm: False right arm: True
+2023-06-07 17:18:06,794 - my_robot - INFO - leg motion played: rightForward
+2023-06-07 17:18:09,004 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:18:09,005 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:18:22,511 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:18:22,512 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:18:22,526 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:18:22,527 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:18:22,527 - my_robot - INFO - forward raise
+2023-06-07 17:18:22,527 - my_robot - INFO - left arm: False right arm: True
+2023-06-07 17:18:22,527 - my_robot - INFO - leg motion played: rightForward
+2023-06-07 17:18:24,674 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:18:24,674 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:18:53,248 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:18:53,249 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:18:53,263 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:18:53,263 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:18:53,264 - my_robot - INFO - forward raise
+2023-06-07 17:18:53,264 - my_robot - INFO - left arm: False right arm: True
+2023-06-07 17:18:53,264 - my_robot - INFO - leg motion played: rightForward
+2023-06-07 17:18:55,553 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:18:55,553 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:19:02,719 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:19:02,720 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:19:02,735 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:19:02,736 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:19:02,736 - my_robot - INFO - Robot resets
+2023-06-07 17:19:03,317 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:19:03,317 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:19:04,145 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:19:04,145 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:19:04,160 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:19:04,162 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:19:04,162 - my_robot - INFO - Robot resets
+2023-06-07 17:19:04,650 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:19:04,651 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:19:15,215 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:19:15,215 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:19:15,229 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:19:15,229 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:19:15,230 - my_robot - INFO - side raise
+2023-06-07 17:19:15,230 - my_robot - INFO - left arm: False right arm: True
+2023-06-07 17:19:15,230 - my_robot - INFO - leg motion played: rightSide
+2023-06-07 17:19:17,426 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:19:17,426 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:19:45,379 - root - ERROR - There is a connection error
+2023-06-07 17:19:49,893 - root - INFO - Robot ready
+2023-06-07 17:19:57,669 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:19:57,669 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:19:57,685 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:19:57,685 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:19:57,685 - my_robot - INFO - Robot resets
+2023-06-07 17:19:58,267 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:19:58,267 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:20:03,902 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:20:03,903 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:20:03,918 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:20:03,918 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:20:03,919 - my_robot - INFO - Robot resets
+2023-06-07 17:20:04,510 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:20:04,510 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:20:34,063 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:20:34,063 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:20:34,078 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:20:34,078 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:20:34,079 - my_robot - INFO - Robot resets
+2023-06-07 17:20:34,676 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:20:34,676 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:20:36,934 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:20:36,934 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:20:36,949 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:20:36,949 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:20:36,951 - my_robot - INFO - side raise
+2023-06-07 17:20:36,951 - my_robot - INFO - left arm: True right arm: True
+2023-06-07 17:20:36,951 - my_robot - INFO - leg motion played: bothSide
+2023-06-07 17:20:39,238 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:20:39,238 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:22:29,556 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:22:29,556 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:22:29,571 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:22:29,571 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:22:29,572 - my_robot - INFO - side raise
+2023-06-07 17:22:29,572 - my_robot - INFO - left arm: True right arm: True
+2023-06-07 17:22:29,572 - my_robot - INFO - leg motion played: bothSide
+2023-06-07 17:22:31,803 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:22:31,803 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:22:45,554 - root - ERROR - There is a connection error
+2023-06-07 17:23:09,416 - root - INFO - Robot ready
+2023-06-07 17:23:18,923 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:23:18,923 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:23:18,938 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:23:18,938 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:23:18,939 - my_robot - INFO - side raise
+2023-06-07 17:23:18,939 - my_robot - INFO - left arm: True right arm: True
+2023-06-07 17:23:18,939 - my_robot - INFO - leg motion played: bothSide
+2023-06-07 17:23:21,196 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:23:21,196 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:23:33,915 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:23:33,915 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:23:33,929 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:23:33,929 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:23:33,930 - my_robot - INFO - side raise
+2023-06-07 17:23:33,930 - my_robot - INFO - left arm: False right arm: True
+2023-06-07 17:23:33,930 - my_robot - INFO - leg motion played: rightSide
+2023-06-07 17:23:36,166 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:23:36,166 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:23:36,351 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:23:36,352 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:23:36,366 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:23:36,366 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:23:36,367 - my_robot - INFO - side raise
+2023-06-07 17:23:36,367 - my_robot - INFO - left arm: False right arm: True
+2023-06-07 17:23:36,367 - my_robot - INFO - leg motion played: rightSide
+2023-06-07 17:23:38,584 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:23:38,585 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:23:58,148 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:23:58,149 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:23:58,164 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:23:58,164 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:23:58,165 - my_robot - INFO - side raise
+2023-06-07 17:23:58,165 - my_robot - INFO - left arm: True right arm: True
+2023-06-07 17:23:58,165 - my_robot - INFO - leg motion played: bothSide
+2023-06-07 17:24:00,364 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:00,364 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:24:15,565 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:24:15,565 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:24:15,580 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:24:15,580 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:15,581 - my_robot - INFO - side raise
+2023-06-07 17:24:15,581 - my_robot - INFO - left arm: False right arm: True
+2023-06-07 17:24:15,581 - my_robot - INFO - leg motion played: rightSide
+2023-06-07 17:24:17,769 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:17,769 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:24:19,314 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:24:19,314 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:24:19,328 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:24:19,328 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:19,329 - my_robot - INFO - side raise
+2023-06-07 17:24:19,329 - my_robot - INFO - left arm: False right arm: True
+2023-06-07 17:24:19,329 - my_robot - INFO - leg motion played: rightSide
+2023-06-07 17:24:20,435 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:20,436 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:20,621 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:20,622 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:20,806 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:20,807 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:20,994 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:20,995 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:21,179 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:21,180 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:21,556 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:21,557 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:21,557 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:21,557 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:24:21,867 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:24:21,868 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:24:21,882 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:24:21,882 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:21,882 - my_robot - INFO - side raise
+2023-06-07 17:24:21,882 - my_robot - INFO - left arm: False right arm: True
+2023-06-07 17:24:21,883 - my_robot - INFO - leg motion played: rightSide
+2023-06-07 17:24:22,179 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:22,180 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:22,242 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:22,243 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:22,305 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:22,306 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:22,367 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:22,367 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:22,490 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:22,491 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:22,554 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:22,555 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:22,678 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:22,678 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:22,741 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:22,741 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:22,804 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:22,805 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:22,928 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:22,929 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:22,989 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:22,990 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:23,116 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:23,116 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:23,176 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:23,177 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:23,241 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:23,241 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:23,303 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:23,303 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:23,428 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:23,428 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:23,489 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:23,490 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:23,615 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:23,615 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:23,678 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:23,679 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:23,741 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:23,741 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:23,864 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:23,865 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:23,927 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:23,928 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:24,052 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:24,052 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:24,084 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:24,084 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:24:24,300 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:24:24,301 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:24:24,315 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:24:24,316 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:24,317 - my_robot - INFO - side raise
+2023-06-07 17:24:24,317 - my_robot - INFO - left arm: False right arm: True
+2023-06-07 17:24:24,317 - my_robot - INFO - leg motion played: rightSide
+2023-06-07 17:24:26,517 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:26,517 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:24:31,660 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:24:31,660 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:24:31,674 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:24:31,674 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:31,675 - my_robot - INFO - side raise
+2023-06-07 17:24:31,675 - my_robot - INFO - left arm: False right arm: True
+2023-06-07 17:24:31,675 - my_robot - INFO - leg motion played: rightSide
+2023-06-07 17:24:32,965 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:32,965 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:33,872 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:33,872 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:24:34,087 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-07 17:24:34,088 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-07 17:24:34,102 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-07 17:24:34,102 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-07 17:24:34,103 - my_robot - INFO - forward raise
+2023-06-07 17:24:34,103 - my_robot - INFO - left arm: False right arm: True
+2023-06-07 17:24:34,103 - my_robot - INFO - leg motion played: rightForward
+2023-06-07 17:24:36,337 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-07 17:24:36,337 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-07 17:33:08,587 - root - ERROR - There is a connection error
+2023-06-08 09:06:46,859 - root - INFO - Robot ready
+2023-06-08 09:07:00,084 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-08 09:07:00,084 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-08 09:07:00,099 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-08 09:07:00,099 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-08 09:07:00,100 - my_robot - INFO - forward raise
+2023-06-08 09:07:00,100 - my_robot - INFO - left arm: False right arm: True
+2023-06-08 09:07:00,100 - my_robot - INFO - leg motion played: rightForward
+2023-06-08 09:07:02,456 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-08 09:07:02,457 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-08 09:07:14,492 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-08 09:07:14,493 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-08 09:07:14,507 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-08 09:07:14,507 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-08 09:07:14,508 - my_robot - INFO - Robot resets
+2023-06-08 09:07:15,145 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-08 09:07:15,145 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-08 09:07:53,906 - root - ERROR - There is a connection error
+2023-06-08 09:07:59,702 - root - INFO - Robot ready
+2023-06-08 09:08:35,974 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-08 09:08:35,974 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-08 09:08:35,989 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-08 09:08:35,989 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-08 09:08:35,990 - my_robot - INFO - side raise
+2023-06-08 09:08:35,990 - my_robot - INFO - left arm: False right arm: True
+2023-06-08 09:08:35,990 - my_robot - INFO - leg motion played: rightSide
+2023-06-08 09:08:38,296 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-08 09:08:38,296 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-08 09:12:12,636 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-08 09:12:12,637 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-08 09:12:12,652 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-08 09:12:12,652 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-08 09:12:12,653 - my_robot - INFO - side raise
+2023-06-08 09:12:12,653 - my_robot - INFO - left arm: True right arm: False
+2023-06-08 09:12:12,653 - my_robot - INFO - leg motion played: leftSide
+2023-06-08 09:12:15,055 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-08 09:12:15,055 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-08 09:16:06,969 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-08 09:16:06,969 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-08 09:16:06,984 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-08 09:16:06,984 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-08 09:16:06,985 - my_robot - INFO - side raise
+2023-06-08 09:16:06,985 - my_robot - INFO - left arm: True right arm: False
+2023-06-08 09:16:06,985 - my_robot - INFO - leg motion played: leftSide
+2023-06-08 09:16:09,428 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-08 09:16:09,429 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-08 09:16:17,429 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-08 09:16:17,429 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-08 09:16:17,444 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-08 09:16:17,444 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-08 09:16:17,445 - my_robot - INFO - side raise
+2023-06-08 09:16:17,445 - my_robot - INFO - left arm: False right arm: True
+2023-06-08 09:16:17,445 - my_robot - INFO - leg motion played: rightSide
+2023-06-08 09:16:19,967 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-08 09:16:19,968 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-08 09:36:20,543 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-08 09:36:20,544 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-08 09:36:20,558 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-08 09:36:20,559 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-08 09:36:20,559 - my_robot - INFO - side raise
+2023-06-08 09:36:20,559 - my_robot - INFO - left arm: False right arm: True
+2023-06-08 09:36:20,559 - my_robot - INFO - leg motion played: rightSide
+2023-06-08 09:37:56,402 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-08 09:37:56,402 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-08 09:38:26,822 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-08 09:38:26,822 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-08 09:38:53,645 - root - ERROR - There is a connection error
+2023-06-08 09:41:32,065 - root - INFO - Robot ready
+2023-06-08 09:41:40,805 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-08 09:41:40,806 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-08 09:41:40,821 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-08 09:41:40,822 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-08 09:41:40,822 - my_robot - INFO - side raise
+2023-06-08 09:41:40,822 - my_robot - INFO - left arm: False right arm: True
+2023-06-08 09:41:40,823 - my_robot - INFO - leg motion played: rightSide
+2023-06-08 09:41:43,119 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-08 09:41:43,121 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-08 09:42:14,624 - root - ERROR - There is a connection error
+2023-06-08 09:42:20,093 - root - INFO - Robot ready
+2023-06-08 09:42:28,713 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-08 09:42:28,713 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-08 09:42:28,727 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-08 09:42:28,727 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-08 09:42:28,728 - my_robot - INFO - side raise
+2023-06-08 09:42:28,728 - my_robot - INFO - left arm: False right arm: True
+2023-06-08 09:42:28,728 - my_robot - INFO - leg motion played: rightSide
+2023-06-08 09:42:31,030 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-08 09:42:31,030 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-08 09:43:52,134 - root - ERROR - There is a connection error
+2023-06-08 09:57:22,600 - root - INFO - Robot ready
+2023-06-08 09:59:13,115 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-08 09:59:13,115 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-08 09:59:13,130 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-08 09:59:13,130 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-08 09:59:13,131 - my_robot - INFO - side raise
+2023-06-08 09:59:13,131 - my_robot - INFO - left arm: False right arm: True
+2023-06-08 09:59:13,132 - my_robot - INFO - leg motion played: rightSide
+2023-06-08 09:59:15,468 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-08 09:59:15,469 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-08 10:02:41,084 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-08 10:02:41,084 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-08 10:02:41,097 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-08 10:02:41,097 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-08 10:02:41,098 - my_robot - INFO - side raise
+2023-06-08 10:02:41,098 - my_robot - INFO - left arm: False right arm: True
+2023-06-08 10:02:41,098 - my_robot - INFO - leg motion played: rightSide
+2023-06-08 10:07:32,829 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-08 10:07:32,829 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-08 10:19:49,067 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-08 10:19:49,067 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-08 10:32:06,918 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-08 10:32:06,918 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-08 10:33:07,645 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-08 10:33:07,645 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-08 10:33:39,641 - root - ERROR - There is a connection error
+2023-06-08 11:11:46,410 - root - INFO - Robot ready
+2023-06-08 11:12:03,705 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-08 11:12:03,705 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-08 11:12:03,718 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-08 11:12:03,719 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-08 11:12:03,719 - my_robot - INFO - say Hi
+2023-06-08 11:12:03,725 - my_robot - INFO - volume: 50
+2023-06-08 11:12:07,241 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-08 11:12:07,242 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-08 11:12:07,318 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-08 11:12:07,319 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-08 11:12:07,334 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-08 11:12:07,334 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-08 11:12:07,336 - my_robot - INFO - move forward by 1 times, with speed 50
+2023-06-08 11:12:12,889 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-08 11:12:12,890 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-08 11:12:33,177 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-08 11:12:33,177 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-08 11:12:33,191 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-08 11:12:33,192 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-08 11:12:33,193 - my_robot - INFO - say Hi
+2023-06-08 11:12:33,194 - my_robot - INFO - volume: 50
+2023-06-08 11:12:36,264 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-08 11:12:36,264 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-08 11:12:37,169 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-08 11:12:37,169 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-08 11:12:37,184 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-08 11:12:37,184 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-08 11:12:37,185 - my_robot - INFO - move forward by 1 times, with speed 50
+2023-06-08 11:12:43,619 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-08 11:12:43,620 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-08 11:12:53,135 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-08 11:12:53,136 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-08 11:12:53,150 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-08 11:12:53,151 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-08 11:12:53,152 - my_robot - INFO - say Hi
+2023-06-08 11:12:53,152 - my_robot - INFO - volume: 50
+2023-06-08 11:12:56,315 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-08 11:12:56,316 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-08 11:12:57,186 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-08 11:12:57,186 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-08 11:12:57,200 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-08 11:12:57,200 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-08 11:12:57,202 - my_robot - INFO - move forward by 1 times, with speed 50
+2023-06-08 11:13:03,466 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-08 11:13:03,466 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-08 11:14:22,942 - root - ERROR - There is a connection error
+2023-06-15 10:13:56,331 - root - INFO - Robot ready
+2023-06-15 10:14:16,521 - root - ERROR - There is a connection error
+2023-06-15 10:14:21,098 - root - INFO - Robot ready
+2023-06-15 10:16:35,491 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-15 10:16:35,491 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-15 10:16:35,505 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-15 10:16:35,505 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-15 10:16:35,506 - my_robot - INFO - side raise
+2023-06-15 10:16:35,506 - my_robot - INFO - left arm: False right arm: True
+2023-06-15 10:16:35,506 - my_robot - INFO - leg motion played: rightSide
+2023-06-15 10:16:37,809 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-15 10:16:37,809 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-15 10:16:58,813 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-15 10:16:58,814 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-15 10:16:58,828 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-15 10:16:58,828 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-15 10:16:58,829 - my_robot - INFO - side raise
+2023-06-15 10:16:58,829 - my_robot - INFO - left arm: False right arm: True
+2023-06-15 10:16:58,829 - my_robot - INFO - leg motion played: rightSide
+2023-06-15 10:17:01,140 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-15 10:17:01,140 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-15 10:17:05,064 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-15 10:17:05,065 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-15 10:17:05,079 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-15 10:17:05,079 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-15 10:17:05,080 - my_robot - INFO - Robot resets
+2023-06-15 10:17:05,754 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-15 10:17:05,754 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-15 10:17:08,989 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-15 10:17:08,990 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-15 10:17:09,005 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-15 10:17:09,005 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-15 10:17:09,006 - my_robot - INFO - side raise
+2023-06-15 10:17:09,006 - my_robot - INFO - left arm: False right arm: True
+2023-06-15 10:17:09,006 - my_robot - INFO - leg motion played: rightSide
+2023-06-15 10:17:11,341 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-15 10:17:11,341 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-15 10:17:11,451 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-15 10:17:11,452 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-15 10:17:11,466 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-15 10:17:11,466 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-15 10:17:11,467 - my_robot - INFO - Robot resets
+2023-06-15 10:17:12,492 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-15 10:17:12,492 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-15 10:22:50,148 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-15 10:22:50,149 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-15 10:22:50,163 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-15 10:22:50,163 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-15 10:22:50,164 - my_robot - INFO - move forward by 2 times, with speed 50
+2023-06-15 10:22:58,296 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-15 10:22:58,296 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-15 10:25:27,521 - root - ERROR - There is a connection error
+2023-06-22 09:06:25,438 - root - INFO - Robot ready
+2023-06-22 09:09:14,450 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-22 09:09:14,451 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-22 09:09:14,464 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-22 09:09:14,464 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-22 09:09:14,465 - my_robot - INFO - side raise
+2023-06-22 09:09:14,465 - my_robot - INFO - left arm: True right arm: False
+2023-06-22 09:09:14,465 - my_robot - INFO - leg motion played: leftSide
+2023-06-22 09:09:16,719 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-22 09:09:16,719 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-22 09:09:33,309 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-22 09:09:33,310 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-22 09:09:33,324 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-22 09:09:33,324 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-22 09:09:33,325 - my_robot - INFO - Robot resets
+2023-06-22 09:09:33,877 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-22 09:09:33,877 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-22 09:09:39,347 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-22 09:09:39,347 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-22 09:09:39,362 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-22 09:09:39,362 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-22 09:09:39,363 - my_robot - INFO - side raise
+2023-06-22 09:09:39,363 - my_robot - INFO - left arm: True right arm: False
+2023-06-22 09:09:39,363 - my_robot - INFO - leg motion played: leftSide
+2023-06-22 09:09:41,650 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-22 09:09:41,651 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-22 09:09:41,773 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-22 09:09:41,774 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-22 09:09:41,788 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-22 09:09:41,788 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-22 09:09:41,788 - my_robot - INFO - Robot resets
+2023-06-22 09:09:42,446 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-22 09:09:42,447 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-22 09:13:46,340 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-22 09:13:46,340 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-22 09:13:46,354 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-22 09:13:46,355 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-22 09:13:46,355 - my_robot - INFO - side raise
+2023-06-22 09:13:46,356 - my_robot - INFO - left arm: True right arm: False
+2023-06-22 09:13:46,356 - my_robot - INFO - leg motion played: leftSide
+2023-06-22 09:13:48,630 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-22 09:13:48,630 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-22 09:13:49,331 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-22 09:13:49,332 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-22 09:13:49,347 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-22 09:13:49,347 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-22 09:13:49,348 - my_robot - INFO - Robot resets
+2023-06-22 09:13:49,893 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-22 09:13:49,894 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-22 09:14:10,299 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-22 09:14:10,299 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-22 09:14:10,314 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-22 09:14:10,314 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-22 09:14:10,315 - my_robot - INFO - side raise
+2023-06-22 09:14:10,315 - my_robot - INFO - left arm: True right arm: False
+2023-06-22 09:14:10,316 - my_robot - INFO - leg motion played: leftSide
+2023-06-22 09:14:12,639 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-22 09:14:12,639 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-22 09:14:13,296 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-22 09:14:13,297 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-22 09:14:13,311 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-22 09:14:13,311 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-22 09:14:13,312 - my_robot - INFO - Robot resets
+2023-06-22 09:14:14,121 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-22 09:14:14,121 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-22 09:15:43,656 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-22 09:15:43,656 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-22 09:15:43,671 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-22 09:15:43,671 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-22 09:15:43,672 - my_robot - INFO - side raise
+2023-06-22 09:15:43,672 - my_robot - INFO - left arm: True right arm: False
+2023-06-22 09:15:43,672 - my_robot - INFO - leg motion played: leftSide
+2023-06-22 09:15:45,940 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-22 09:15:45,940 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-22 09:15:46,654 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-22 09:15:46,654 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-22 09:15:46,668 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-22 09:15:46,668 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-22 09:15:46,670 - my_robot - INFO - Robot resets
+2023-06-22 09:15:47,227 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-22 09:15:47,227 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-22 09:16:54,599 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-22 09:16:54,599 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-22 09:16:54,614 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-22 09:16:54,615 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-22 09:16:54,615 - my_robot - INFO - side raise
+2023-06-22 09:16:54,615 - my_robot - INFO - left arm: True right arm: False
+2023-06-22 09:16:54,616 - my_robot - INFO - leg motion played: leftSide
+2023-06-22 09:16:56,956 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-22 09:16:56,956 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-22 09:16:57,657 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-22 09:16:57,657 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-22 09:16:57,671 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-22 09:16:57,672 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-22 09:16:57,672 - my_robot - INFO - Robot resets
+2023-06-22 09:16:58,315 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-22 09:16:58,315 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-22 09:17:13,636 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-22 09:17:13,637 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-22 09:17:13,652 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-22 09:17:13,652 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-22 09:17:13,653 - my_robot - INFO - side raise
+2023-06-22 09:17:13,653 - my_robot - INFO - left arm: True right arm: False
+2023-06-22 09:17:13,653 - my_robot - INFO - leg motion played: leftSide
+2023-06-22 09:17:15,997 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-22 09:17:15,997 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-22 09:17:16,637 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-22 09:17:16,638 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-22 09:17:16,652 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-22 09:17:16,653 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-22 09:17:16,653 - my_robot - INFO - Robot resets
+2023-06-22 09:17:17,113 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-22 09:17:17,113 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-22 09:19:26,859 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-22 09:19:26,859 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-22 09:19:26,874 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-22 09:19:26,874 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-22 09:19:26,875 - my_robot - INFO - side raise
+2023-06-22 09:19:26,875 - my_robot - INFO - left arm: True right arm: False
+2023-06-22 09:19:26,875 - my_robot - INFO - leg motion played: leftSide
+2023-06-22 09:19:29,170 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-22 09:19:29,171 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-22 09:19:29,858 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-22 09:19:29,859 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-22 09:19:29,872 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-22 09:19:29,873 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-22 09:19:29,873 - my_robot - INFO - Robot resets
+2023-06-22 09:19:32,484 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-22 09:19:32,484 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-22 09:19:38,850 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-22 09:19:38,851 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-22 09:19:38,865 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-22 09:19:38,865 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-22 09:19:38,866 - my_robot - INFO - side raise
+2023-06-22 09:19:38,866 - my_robot - INFO - left arm: True right arm: False
+2023-06-22 09:19:38,866 - my_robot - INFO - leg motion played: leftSide
+2023-06-22 09:19:41,127 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-22 09:19:41,128 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-22 09:19:41,853 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-22 09:19:41,853 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-22 09:19:41,868 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-22 09:19:41,869 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-22 09:19:41,869 - my_robot - INFO - Robot resets
+2023-06-22 09:19:43,432 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-22 09:19:43,433 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-22 09:22:33,433 - root - ERROR - There is a connection error
+2023-06-22 09:52:02,159 - root - INFO - Robot ready
+2023-06-22 09:52:24,998 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-22 09:52:24,999 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-22 09:52:25,013 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-22 09:52:25,014 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-22 09:52:25,016 - my_robot - INFO - move forward by 2 times, with speed 50
+2023-06-22 09:52:33,039 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-22 09:52:33,040 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-22 09:57:44,805 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-22 09:57:44,805 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-22 09:57:44,819 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-22 09:57:44,820 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-22 09:57:44,820 - my_robot - INFO - side raise
+2023-06-22 09:57:44,820 - my_robot - INFO - left arm: True right arm: False
+2023-06-22 09:57:44,820 - my_robot - INFO - leg motion played: leftSide
+2023-06-22 09:57:52,086 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-22 09:57:52,087 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-22 09:57:55,516 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-22 09:57:55,517 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-22 09:58:02,119 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-22 09:58:02,119 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-22 09:59:01,835 - root - INFO - Robot ready
+2023-06-22 09:59:12,798 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-22 09:59:12,799 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-22 09:59:12,814 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-22 09:59:12,815 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-22 09:59:12,815 - my_robot - INFO - side raise
+2023-06-22 09:59:12,815 - my_robot - INFO - left arm: True right arm: False
+2023-06-22 09:59:12,815 - my_robot - INFO - leg motion played: leftSide
+2023-06-22 09:59:15,140 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-22 09:59:15,141 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-22 09:59:15,169 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-22 09:59:15,170 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-22 09:59:15,185 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-22 09:59:15,186 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-22 09:59:15,186 - my_robot - INFO - Robot resets
+2023-06-22 09:59:15,969 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-22 09:59:15,969 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-22 10:01:26,300 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-22 10:01:26,301 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-22 10:01:26,316 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-22 10:01:26,316 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-22 10:01:26,316 - my_robot - INFO - side raise
+2023-06-22 10:01:26,316 - my_robot - INFO - left arm: True right arm: False
+2023-06-22 10:01:26,317 - my_robot - INFO - leg motion played: leftSide
+2023-06-22 10:01:28,664 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-22 10:01:28,664 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-22 10:01:29,304 - transitions.core - INFO - Finished processing state idle exit callbacks.
+2023-06-22 10:01:29,304 - transitions.core - INFO - Finished processing state new_action enter callbacks.
+2023-06-22 10:01:29,318 - transitions.core - INFO - Finished processing state new_action exit callbacks.
+2023-06-22 10:01:29,319 - transitions.core - INFO - Finished processing state running enter callbacks.
+2023-06-22 10:01:29,320 - my_robot - INFO - Robot resets
+2023-06-22 10:01:30,834 - transitions.core - INFO - Finished processing state running exit callbacks.
+2023-06-22 10:01:30,835 - transitions.core - INFO - Finished processing state idle enter callbacks.
+2023-06-22 10:27:56,062 - root - ERROR - There is a connection error

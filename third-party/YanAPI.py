@@ -17,7 +17,6 @@ import logging
 import nest_asyncio
 #from lib_ukit import lib_send
 from socket import *
-import fcntl
 import struct
 import subprocess
 import re
@@ -25,6 +24,8 @@ import os
 import cv2
 from multiprocessing import Process
 from enum import Enum, unique
+sys.path.append("../Posture-Detection/Demo")
+import fcntl
 
 
 basic_url = "http://160.69.69.147:9090/v1/"
