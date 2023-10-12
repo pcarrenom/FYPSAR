@@ -1,0 +1,9 @@
+depthai==2.23.0.0
+nep==0.5.4.0
+numpy==1.26.0
+open3d==0.17.0
+opencv_python==4.8.1.78
+pyzmq==23.2.0
+rize==0.1.4.3
+schedule==1.2.1
+transitions==0.9.0

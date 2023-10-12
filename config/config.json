@@ -1,6 +1,6 @@
 {
     "ip": {
-        "robot": "160.69.69.4"
+        "robot": "192.168.11.21"
     },
     "directory": {
         "config":"../config",
