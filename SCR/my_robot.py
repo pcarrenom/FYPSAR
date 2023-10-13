@@ -186,7 +186,8 @@ class Robot():
             YanAPI.stop_voice_tts()
             time.sleep(4.8)
             YanAPI.start_voice_tts("And the other side.", interrupt=False)
-            time.sleep(2)
+            self.speech_pause()
+            YanAPI.stop_voice_tts()
             YanAPI.start_voice_tts("Feel free to do it as many times as you wish.", interrupt=False)
             self.speech_pause()
             YanAPI.stop_voice_tts()
@@ -198,7 +199,7 @@ class Robot():
             YanAPI.start_voice_tts("I need you to follow the tip of my hand. roll your head from your right to the left.", interrupt=False)
             self.speech_pause()
             YanAPI.stop_voice_tts()
-            time.sleep(14)
+            time.sleep(10)
             YanAPI.start_voice_tts("Now to the right.", interrupt=False)
             self.speech_pause()
             YanAPI.stop_voice_tts()
@@ -240,7 +241,7 @@ class Robot():
             YanAPI.start_voice_tts("Have yourself doing this stretch when seated. Roll one of your foot.", interrupt=False)
             self.speech_pause()
             YanAPI.stop_voice_tts()
-            time.sleep(11)
+            time.sleep(12)
             YanAPI.start_voice_tts("Now roll the other foot", interrupt=False)
             self.speech_pause()
             YanAPI.stop_voice_tts()
@@ -349,7 +350,7 @@ class Robot():
         self.speech_pause()
         YanAPI.stop_voice_tts()
         
-        time.sleep(2)
+        # time.sleep(2)
         return "success"
 
     def move(self, value, parameters):
